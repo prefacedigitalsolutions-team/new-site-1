@@ -1,0 +1,269 @@
+/* Font and Base Reset wrapper */
+.main-footer {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #162a35; /* Dark teal background from the image */
+  color: #a3b8cc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-footer * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 1. Newsletter Banner Styles --- */
+.newsletter-banner {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200') no-repeat center center;
+  background-size: cover;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.newsletter-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.newsletter-container label {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+/* Custom class to avoid Bootstrap conflicts */
+.input-group-custom {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.input-group-custom input {
+  flex: 1;
+  border: none;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-style: italic;
+  outline: none;
+  color: #333;
+}
+
+.input-group-custom button {
+  background-color:  #1f3849;
+  color: #ffffff;
+  border: none;
+  padding: 0 25px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.input-group-custom button:hover {
+  background-color: #49b6d3;
+}
+
+/* --- 2. Middle Grid Styles --- */
+.footer-middle {
+  padding: 70px 0 60px 0;
+  width: 100%;
+}
+
+.footer-grid-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1fr 1.5fr;
+  gap: 30px;
+}
+
+/* Brand details specific styling */
+.brand-col .brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.brand-col h2 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.brand-col address {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #9bb3c7;
+  margin-bottom: 12px;
+}
+
+.brand-col .email-link {
+  font-size: 12px;
+  color: #5ccfed;
+  text-decoration: none;
+}
+
+/* General Column Headings & Lists */
+.footer-col h3 {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #9bb3c7;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+/* Social icons column styling with Bootstrap Icons */
+.social-icons-row {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-icons-row a {
+  color: #5ccfed;
+  font-size: 16px; /* Slightly adjusted for bootstrap icons */
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons-row a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
+
+/* --- bottom section --- */
+
+
+.footer-bottom-bar {
+  background-color: #0e1b24; 
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bottom-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: center;
+  gap: 8px;        
+  text-align: center;
+}
+
+.copyright-text {
+  font-size: 13px;
+  color: #7d96a8;        
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.design-by {
+  font-size: 12px;
+  color: #586e7d;       
+  letter-spacing: 0.5px;
+}
+
+.design-by a {
+  color: #5ccfed;         
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.design-by a:hover {
+  color: #ffffff;       
+  text-decoration: underline;
+}
+
+
+
+
+
+/* --- Responsive Adaptability --- */
+@media (max-width: 992px) {
+  .footer-grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .brand-col {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bottom-right-text {
+    text-align: center;
+  }
+  .bottom-left-links {
+    justify-content: center;
+  }
+  .bottom-left-links a {
+    margin: 5px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .brand-col {
+    grid-column: span 1;
+  }
+}

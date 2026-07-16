@@ -1,0 +1,197 @@
+.modernStatic {
+    width: 100%;
+    background-color: #cfcece; 
+    position: relative;
+
+    overflow: visible; 
+    padding: 50px 0px 150px 0; 
+    box-sizing: border-box;
+}
+
+/* left gap patti */
+.modernOverlay {
+    width: 85%; 
+    margin-left: 180px; 
+    margin-right: 0;
+    
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    background-image: url("/src/assets/images/hero/home-banar-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+
+/* overlay */
+.modernOverlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(38, 53, 77, 0.72);
+    z-index: 1;
+}
+
+/*left side diamond  */
+
+.diamondBox {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    left: -100px; 
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background: #2b3a4e; 
+    border: 3px solid #ff5d52; 
+    z-index: 5; 
+    box-sizing: border-box;
+}
+
+/* Diamond ke bahar ka patla secondary border */
+
+.diamondBox::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    border: 2px solid rgba(255, 93, 82, 0.6);
+    pointer-events: none;
+}
+
+.diamondContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg); 
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.diamondContent span {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.diamondContent h2 {
+    font-size: 40px;
+    margin: 2px 0 8px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.diamondContent p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #d9d9d9;
+    margin: 0;
+}
+
+ /* right side service gride */
+ 
+ .serviceWrapper {
+    margin-left: 230px; 
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 50px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    z-index: 2; 
+}
+
+.serviceBox {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 36px;
+    color: #ff5d52; 
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.serviceBox h3 {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+}
+
+.serviceBox p {
+    color: #c7d1dd;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+@media (max-width: 991px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    .modernOverlay {
+        width: calc(100% - 40px) !important; 
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        height: auto;
+        display: block;
+        padding: 160px 25px 40px; 
+    }
+
+    .diamondBox {
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+        z-index: 10; 
+    }
+
+    .serviceWrapper {
+        margin-left: 0;
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 30px;
+        position: relative; 
+        z-index: 5; 
+    }
+}
+
+
+@media (max-width: 576px) {
+  
+    .modernOverlay {
+        margin-top: 150px;
+        width:75%;
+        margin-left: 25px !important;
+        margin-right: 15px !important;
+        padding: 200px 20px 60px;
+    }
+
+
+    .diamondBox {
+        width: 250px;
+        height: 250px;
+        top: 0px;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .diamondContent h2 {
+        font-size: 32px;
+    }
+
+    .diamondContent p {
+        display: none;
+    }
+}

@@ -1,0 +1,156 @@
+
+.product-intro {
+    padding: 120px 0 0 0px;
+    background: #cfcece;
+    overflow: hidden;
+}
+
+.product-intro .container {
+    width: min(1200px, 95%);
+    margin: 0 auto;
+}
+
+/* 2-Column Asymmetric Grid Layout */
+.intro-split-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* left column */
+.intro-title-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-title-block .sub-tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.intro-title-block .intro-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px; 
+    font-weight: 600; 
+    color: #111111;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* right column */
+.intro-desc-wrapper {
+    position: relative;
+    padding-left: 40px; 
+}
+
+/* Base Vertical Pipe Line */
+.intro-desc-wrapper .accent-line {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: rgba(238, 119, 8, 0.95); 
+    overflow: hidden; 
+}
+
+/* Pipe ke ander */
+.intro-desc-wrapper .accent-line::after {
+    content: '';
+    position: absolute;
+    top: -50%; 
+    left: 0;
+    width: 100%;
+    height: 40px; 
+    background: linear-gradient(to bottom, rgba(17,17,17,0) 0%, #111111 50%, rgba(17,17,17,0) 100%);
+
+    animation: pipeFlow 4.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+@keyframes pipeFlow {
+    0% {
+        top: -50%;
+    }
+    100% {
+        top: 120%;
+    }
+}
+
+.intro-desc-wrapper .intro-desc {
+    font-size: 16px;
+    line-height: 1.85;
+    color: #222222;
+    margin: 0;
+    font-weight: 400;
+    text-align: justify;
+}
+
+
+@media (max-width: 991px) {
+    .intro-split-grid {
+        gap: 40px;
+    }
+    
+    .intro-title-block .intro-title {
+        font-size: 44px;
+    }
+    
+    .intro-desc-wrapper .intro-desc {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-intro {
+        padding: 80px 10px 30px 10px;
+    }
+
+    .intro-split-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .intro-title-block .intro-title {
+        font-size: 38px;
+    }
+
+    .intro-desc-wrapper {
+        padding-left: 0;
+        padding-top: 24px;
+    }
+
+
+    .intro-desc-wrapper .accent-line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 80px; 
+        height: 2px;
+        bottom: auto;
+    }
+
+
+    .intro-desc-wrapper .accent-line::after {
+        top: 0;
+        left: -50%;
+        width: 30px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(17,17,17,0) 0%, #111111 50%, rgba(17,17,17,0) 100%);
+        animation: pipeFlowHorizontal 2.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    }
+}
+
+@keyframes pipeFlowHorizontal {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 120%;
+    }
+}

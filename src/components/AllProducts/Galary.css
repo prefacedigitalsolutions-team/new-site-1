@@ -1,0 +1,128 @@
+.galary-section {
+    padding: 100px 0;
+    background: #cfcece; 
+}
+
+.galary-section .container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+.galary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 260px;
+    gap: 22px;
+}
+
+/* =======================================================
+   GALARY CARD (GSAP Optimizations Added)
+======================================================= */
+.galary-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    
+    /* FIX 1: Kisi bhi tarah ka unintended transition block karne ke liye */
+    transition: none !important; 
+    
+    /* FIX 2: Browser ke GPU ko activate karne ke liye taaki scroll smooth ho */
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+}
+
+.galary-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* FIX 3: Transition ko explicitly transform par target kiya taaki layout properties ko disturb na kare */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.galary-card:hover img {
+    transform: scale(1.08);
+}
+
+/* =======================================================
+   Overlay (No changes to your styles, just performance safe)
+======================================================= */
+.galary-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    color: #fff;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.75) 20%,
+        rgba(0, 0, 0, 0.40) 40%,
+        rgba(0, 0, 0, 0.12) 70%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    /* Safe side pointer events none kiya hai taaki GSAP trigger par hover issue na kare */
+    pointer-events: none; 
+}
+
+.galary-overlay span {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ddd;
+    margin-bottom: 8px;
+}
+
+.galary-overlay h3 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.galary-overlay p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    color: #eee;
+}
+
+/* =======================================================
+   Different Layout & Media Queries (As they were)
+======================================================= */
+.large {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.tall {
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+@media(max-width:991px) {
+    .galary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:767px) {
+    .galary-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+    }
+
+    .large,
+    .tall,
+    .wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}

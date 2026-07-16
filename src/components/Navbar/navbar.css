@@ -1,0 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*nav bar section start */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 0;
+    z-index: 999;
+    transition: all .4s ease;
+}
+
+.navbar.sticky {
+    left: 8px;
+    right: 8px;
+    width: auto;
+    padding: 8px 0;
+    background: rgba(0, 0, 0, .82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .30);
+}
+
+.navbar-container {
+    width: min(92%, 1300px);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.navbar-logo img {
+    width: 150px;
+    display: block;
+}
+
+/* Main Menu Links */
+.navbar-menu > ul {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.navbar-menu > ul > li {
+    position: relative;
+}
+
+.navbar-menu > ul > li > a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 0;
+    position: relative;
+    transition: .35s ease;
+    overflow: hidden;
+}
+
+/* Header Links Underline Effect */
+.navbar-menu > ul > li > a::before {
+    content: "";
+    position: absolute;
+    left: -50%;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background: #d6b06d;
+    transition: .35s ease;
+}
+
+.navbar-menu > ul > li > a::after {
+    content: "";
+    position: absolute;
+    right: -50%;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background: #d6b06d;
+    transition: .35s ease;
+}
+
+.navbar-menu > ul > li:hover > a {
+    color: #d6b06d;
+}
+
+.navbar-menu > ul > li:hover > a::before {
+    left: 0;
+}
+
+.navbar-menu > ul > li:hover > a::after {
+    right: 0;
+}
+
+/* Arrow (FontAwesome Icon) */
+.arrow {
+    font-size: 11px;
+    transition: .35s ease;
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+
+
+/* dropdown connar design  */
+
+.mega-dropdown::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: 200px;  
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mega-dropdown:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*
+   MEGA DROPDOWN MAIN SHUTTER (DESKTOP)*/
+
+
+.mega-dropdown {
+    position: static !important;
+}
+
+/* Outer Wrapper for Shutters */
+.dropdown-shutter-bg {
+    margin-top: -10px;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(95vw, 1150px);
+    height: 400px;
+    pointer-events: none;
+    z-index: 998;
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* mega shutter */
+
+.shutter-left, .shutter-right {
+    position: absolute;
+    top: 0;
+    width: 50.5%; 
+    height: 100%;
+    background: #ffffff;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.shutter-left {
+    left: 0;
+    transform: translateX(-101.5%); 
+
+}
+
+.shutter-right {
+    right: 0;
+    transform: translateX(101.5%); 
+
+}
+
+/* Mega Menu Grid Container */
+.mega-menu-content {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translate(-50%, 15px);
+    width: min(95vw, 1150px);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    padding: 10px 40px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.45s ease, visibility 0.3s ease;
+}
+
+/* Trigger Animations on Hover */
+.mega-dropdown:hover .dropdown-shutter-bg {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mega-dropdown:hover .shutter-left,
+.mega-dropdown:hover .shutter-right {
+    transform: translateX(0); 
+}
+
+.mega-dropdown:hover .mega-menu-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+
+/* Column Headings with Elegant Underline */
+.mega-column h3 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(214, 176, 109, 0.4); 
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.mega-column ul li {
+    margin-bottom: 6px;
+    margin-left: 5px;
+}
+
+/* shutter effect on hover */
+.mega-column ul li a {
+    position: relative;
+    font-size: 13.5px;
+    color: #475569;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 1px;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+
+/* --- Ultra-Smooth Shutter Background Effect Links --- */
+.mega-column ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50.5%;
+    width: 50.5%;
+    height: 100%;
+    background: #0f172a; 
+    /* cubic-bezier curve ko aur natural kiya aur transitions me will-change lagaya */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out;
+    z-index: -1;
+    transform-origin: left;
+    opacity: 0; 
+    will-change: transform, opacity; /* Hardware acceleration active karta hai smoothness ke liye */
+}
+
+.mega-column ul li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50.5%;
+    width: 50.5%;
+    height: 100%;
+    background: #0f172a;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out;
+    z-index: -1;
+    transform-origin: right;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+/* --- Smooth Hover Transitions --- */
+.mega-column ul li a:hover::before {
+    transform: translateX(100%);
+    opacity: 1; 
+}
+
+.mega-column ul li a:hover::after {
+    transform: translateX(-100%);
+    opacity: 1; 
+}
+
+/* Text Color Transition ko bhi smooth kiya */
+.mega-column ul li a {
+    position: relative;
+    font-size: 13.5px;
+    color: #475569;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 1px;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mega-column ul li a:hover {
+    color: #d6b06d !important;
+}
+
+
+
+.mega-column ul li a:hover::before {
+    transform: translateX(100%);
+}
+
+.mega-column ul li a:hover::after {
+    transform: translateX(-100%);
+}
+
+/* toogle button  */
+.menu-toggle {
+    display: none;
+    width: 45px;
+    height: 45px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    margin: 6px auto;
+    transition: .35s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.arrow i {
+    transition: transform 0.3s ease;
+}
+
+.navbar-menu > ul > li > a.active {
+    color: #d6b06d;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 15px 0;
+        background: #000000;
+        transition: all 0.3s ease;
+    }
+
+    .navbar.sticky {
+        padding: 10px 0;
+        background: rgba(0, 0, 0, 0.95);
+        border-radius: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .navbar-container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-logo img {
+        width: 120px;
+    }
+
+    /* 2. Toggle Burger Menu Display */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* 3. Mobile Navigation Drawer (Sahi Position aur Width) */
+    .navbar-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0f172a;
+        max-height: 0;
+        overflow-y: auto;
+        visibility: hidden;
+        transition: max-height 0.35s ease-in-out, visibility 0.35s ease;
+    }
+
+    /* Active hone par full display */
+    .navbar-menu.active {
+        max-height: 85vh;
+        visibility: visible;
+    }
+
+    .navbar-menu > ul {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 20px 0;
+    }
+
+    .navbar-menu > ul > li {
+        width: 100%;
+        position: relative;
+    }
+
+    .navbar-menu > ul > li > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        color: #ffffff;
+        font-size: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* desktop hover effect disable*/
+    .mega-dropdown::before,
+    .navbar-menu > ul > li > a::before,
+    .navbar-menu > ul > li > a::after,
+    .dropdown-shutter-bg {
+        display: none !important;
+    }
+
+    /* 4. Mobile Mega Menu */
+    .mega-menu-content {
+        position: static;            
+        transform: none !important;    
+        width: 100% !important;
+        background: #1e293b;
+        border-radius: 4px;
+        padding: 15px;
+        margin-top: 10px;
+        
+        display: none; 
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Menu open trigger logic */
+    .dropdown.active .mega-menu-content {
+        display: grid; 
+    }
+
+    /* Column Headings */
+    .mega-column h3 {
+        font-size: 13px;
+        color: #d6b06d;
+        margin-left: 0;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgba(214, 176, 109, 0.2);
+    }
+
+    /* Links styling & reset */
+    .mega-column ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .mega-column ul li a {
+        color: #cbd5e1;
+        font-size: 14px;
+        padding: 8px 10px;
+        display: block;
+        border-radius: 4px;
+        background: transparent;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    /* Shutter animation backgrounds remove */
+    .mega-column ul li a::before,
+    .mega-column ul li a::after {
+        display: none !important;
+    }
+
+    .mega-column ul li a:hover {
+        background: rgba(214, 176, 109, 0.1);
+        color: #d6b06d !important;
+    }
+}
+
+
