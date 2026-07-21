@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
+import ScrollToTop from "./components/Scroll/ScrollToTop";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Preloader from "./components/Preloader/Preloader";
@@ -12,6 +15,7 @@ import Calendar from "./assets/pages/Products/Calendar";
 function App() {
   const [loading, setLoading] = useState(true);
 
+  // Preloader
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -20,18 +24,29 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // AOS Initialize
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   if (loading) {
     return <Preloader />;
   }
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-         <Route path="/products/calendar" element={<Calendar />} />
+        <Route path="/products/calendar" element={<Calendar />} />
       </Routes>
 
       <Footer />

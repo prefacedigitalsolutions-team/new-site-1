@@ -1,40 +1,188 @@
-
-
-
 .static-image {
-  width: 100%;
-  height: 500px;
+    position: relative;
+    width: 100%;
+    height: 550px;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
 
-  position: relative;
+    overflow: hidden;
 }
 
-/* Image ke upar dark overlay */
-.static-image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+/* Dark Overlay */
+.static-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
 }
 
-.static-image h1 {
-  position: relative;
-  z-index: 1;
+/* Content */
+.static-content {
+    position: relative;
+    z-index: 2;
 
-  max-width: 650px;
+    display: flex;
+    align-items: center;
 
-  color: #fff;
-  font-size: 40px;
-  font-weight: 500;
-  text-transform: uppercase;
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
 
-  text-align: center;
+
+
+
+/* Premium Vertical Strip */
+.title-strip {
+    position: relative;
+    width: 5px;
+    height: 130px;
+    margin-right: 20px;
+
+    border-radius: 1px;
+
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.12);
+
+    overflow: hidden;
+}
+
+/* Soft Moving Glow */
+.title-strip::before{
+    content:"";
+
+    position:absolute;
+    left:0;
+    top:-70px;
+
+    width:100%;
+    height:70px;
+
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255,255,255,.99),
+        transparent
+    );
+
+    filter:blur(2px);
+
+    animation: glowMove 4.5s ease-in-out infinite;
+}
+
+/* Soft Background Shine */
+.title-strip::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.18),
+        rgba(255,255,255,.05)
+    );
+
+    animation: stripGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove{
+
+    0%{
+        top:-70px;
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    80%{
+        opacity:1;
+    }
+
+    100%{
+        top:130px;
+        opacity:0;
+    }
+
+}
+
+@keyframes stripGlow{
+
+    from{
+        opacity:.35;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+/* Heading */
+.title-content h2 {
+    color: #fff;
+
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    text-transform: uppercase;
+
+    max-width: 700px;
+}
+
+/* Tablet */
+@media (max-width:991px) {
+
+    .title-content h2 {
+        font-size: 46px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px) {
+
+    .static-image {
+        height: 380px;
+        background-attachment: scroll;
+    }
+
+    .title-strip {
+        height: 80px;
+        margin-right: 18px;
+    }
+
+    .title-content h2 {
+        font-size: 32px;
+    }
+
+    @keyframes waterFlow {
+
+        0% {
+            top: -40px;
+            opacity: 0;
+        }
+
+        15% {
+            opacity: 1;
+        }
+
+        85% {
+            opacity: 1;
+        }
+
+        100% {
+            top: 90px;
+            opacity: 0;
+        }
+    }
+
 }

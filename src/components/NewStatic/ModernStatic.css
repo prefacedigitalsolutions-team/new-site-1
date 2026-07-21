@@ -4,28 +4,27 @@
     position: relative;
 
     overflow: visible; 
-    padding: 50px 0px 150px 0; 
+    padding: 90px 0px 150px 0; 
     box-sizing: border-box;
 }
 
-/* left gap patti */
 .modernOverlay {
-    width: 85%; 
-    margin-left: 180px; 
+    width: 84%;
+    margin-left: 214px;
     margin-right: 0;
-    
-    height: 300px;
+
+    height: 320px;
     position: relative;
     display: flex;
     align-items: center;
     box-sizing: border-box;
 
-    background-image: url("/src/assets/images/hero/home-banar-2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
+
 
 
 /* overlay */
@@ -43,7 +42,7 @@
     width: 260px;
     height: 260px;
     position: absolute;
-    left: -100px; 
+    left: -140px; 
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
     background: #2b3a4e; 
@@ -102,8 +101,8 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px 50px;
-    padding: 0 40px;
+    gap: 20px 70px;
+    padding: 0 10px;
     box-sizing: border-box;
     z-index: 2; 
 }
@@ -123,14 +122,14 @@
 
 .serviceBox h3 {
     color: #fff;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 600;
-    margin: 0 0 6px 0;
+    margin: 0 0 15px 0;
 }
 
 .serviceBox p {
     color: #c7d1dd;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
     margin: 0;
 }

@@ -1,9 +1,10 @@
 import ProductBanner from "../../../components/AllProducts/ProductBanner";
-import ProductIntro from "../../../components/AllProducts/ProductIntro";
+import ProductIntro from "../../../components/AllProducts/Intro";
 import Galary from "../../../components/AllProducts/Galary";
 import ModernStatic from "../../../components/NewStatic/ModernStatic";
 
 import banner from "../../../assets/images/hero/home-banar-2.jpg";
+import aboutImage from "../../../assets/images/hero/home-banar-2.jpg";
 
 // Auto import all hero images
 const galleryFiles = import.meta.glob(
@@ -14,7 +15,7 @@ const galleryFiles = import.meta.glob(
   }
 );
 
-console.log(galleryFiles);
+
 
 const galleryImages = [
   {
@@ -96,9 +97,11 @@ function Calendar() {
 
       <Galary images={galleryImages} />
 
-      <ModernStatic />
+      <ModernStatic image={aboutImage} />
     </>
   );
 }
 
 export default Calendar;
+
+
