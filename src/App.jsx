@@ -11,6 +11,8 @@ import Preloader from "./components/Preloader/Preloader";
 import Home from "./assets/pages/Home";
 import About from "./assets/pages/About";
 import Calendar from "./assets/pages/Products/Calendar";
+import Contact from "./assets/pages/Contact";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -47,6 +49,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products/calendar" element={<Calendar />} />
+         <Route path="/contact" element={<Contact />} />
       </Routes>
 
       <Footer />

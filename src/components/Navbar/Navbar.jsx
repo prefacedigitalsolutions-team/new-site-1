@@ -361,11 +361,11 @@ function Navbar() {
 
               <li>
                 <Link
-                  to="/contact"
+                  to="/Contact"
                   className={location.pathname === "/contact" ? "active" : ""}
                   onClick={closeMenu}
                 >
-                  Contact
+                  Contact Us
                 </Link>
               </li>
             </ul>
