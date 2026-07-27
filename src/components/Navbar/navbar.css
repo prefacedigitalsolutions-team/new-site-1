@@ -123,6 +123,8 @@ ul {
     transform: rotate(180deg);
 }
 
+
+
 /* Dropdown Corner Design */
 .mega-dropdown::before {
     content: "";
@@ -157,12 +159,12 @@ ul {
     transform: translateX(-50%);
     width: 88vw;
     max-width: 1600px;
-    height: 350px; /* Thoda safety height extend kiya hai link contents ke liye */
+    height: 370px; 
     pointer-events: none;
     z-index: 998;
     overflow: hidden;
     opacity: 0;
-    visibility: hidden;
+   
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
@@ -174,6 +176,10 @@ ul {
     height: 100%;
     background: #ffffff;
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.dropdown-shutter-bg.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .shutter-left {
@@ -198,7 +204,7 @@ ul {
     box-shadow: none;
     padding: 20px 40px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: 20px;
     opacity: 0;
     visibility: hidden;
@@ -334,7 +340,7 @@ ul {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Mobile responsive fixes */
+
 @media (max-width: 768px) {
     .navbar {
         position: fixed;

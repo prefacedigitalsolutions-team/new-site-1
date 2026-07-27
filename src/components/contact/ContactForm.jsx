@@ -177,7 +177,7 @@ function ContactForm() {
               <div>
                 <span className="info-label">Company Name</span>
                 <h4 className="info-value">
-                  VinoCosta Technologies Inc.
+                  Preface communications
                 </h4>
               </div>
             </div>
@@ -189,9 +189,11 @@ function ContactForm() {
                   Corporate Address
                 </span>
 
-                <p className="info-value">
-                  Level 4, Cyber Boulevard, Tech Park,
-                  Sector 62, New Delhi, India
+                 <p className="info-value">
+                 Preface Communications
+                 127, First Floor, Kirti Shikhar Building,
+                 District Centre, Janakpuri
+                 New Delhi – 110058, India
                 </p>
               </div>
             </div>
@@ -200,11 +202,12 @@ function ContactForm() {
               <span className="info-icon">✉️</span>
               <div>
                 <span className="info-label">
-                  Email Support
+                 
+                     Email Support
                 </span>
 
                 <p className="info-value">
-                  support@vinocosta.com
+                  teampreface@gmail.com
                 </p>
               </div>
             </div>
@@ -217,7 +220,7 @@ function ContactForm() {
                 </span>
 
                 <p className="info-value">
-                  +91 (11) 4567-8900 / +91 98765 43210
+                  +91-9810968828
                 </p>
               </div>
             </div>
@@ -230,7 +233,7 @@ function ContactForm() {
                 </span>
 
                 <p className="info-value">
-                  Monday – Friday: 9:00 AM – 7:00 PM IST
+                  Monday – Sunday: 10:00 AM – 7:00 PM IST
                 </p>
               </div>
             </div>

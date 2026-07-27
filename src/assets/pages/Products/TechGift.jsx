@@ -6,6 +6,7 @@ import ModernStatic from "../../../components/NewStatic/ModernStatic";
 import banner from "../../../assets/images/hero/home-banar-2.jpg";
 import aboutImage from "../../../assets/images/hero/home-banar-2.jpg";
 
+
 // Auto import all hero images
 const galleryFiles = import.meta.glob(
   "../../images/hero/*.{jpg,jpeg,png,webp}",
@@ -15,84 +16,82 @@ const galleryFiles = import.meta.glob(
   }
 );
 
-    
 
 const galleryImages = [
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Tech Collection",
+    title: "Premium Tech Accessories",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Smart Gadgets",
+    title: "Modern Technology Gifts",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Design",
-    title: "Minimal Look",
+    category: "Corporate Gifts",
+    title: "Branded Tech Products",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Innovation",
+    title: "Smart Office Essentials",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Premium Range",
+    title: "Exclusive Tech Collection",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Digital Accessories",
+    title: "Next Generation Gadgets",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Corporate Solutions",
+    title: "Professional Tech Gifts",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Daily Use",
+    title: "Useful Tech Accessories",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Premium Gifts",
+    title: "Luxury Tech Items",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Exclusive Collection",
+    title: "Advanced Technology Gifts",
   },
-  
 ];
 
 
-function Calendar() {
+function TechGift() {
   return (
     <>
       <ProductBanner
-        title="Calendar"
+        title="Tech Gifts"
         image={banner}
       />
 
       <ProductIntro
-        title="Premium Calendar Collection"
-        description="Our premium calendar collection is thoughtfully designed to combine functionality with refined aesthetics. Crafted using high-quality materials and modern manufacturing standards, each calendar delivers durability, elegance, and reliable performance, making it an ideal choice for contemporary residential and commercial spaces."
+        title="Premium Tech Gift Collection"
+        description="Our premium tech gift collection combines innovation, functionality, and modern design. From smart accessories to corporate technology solutions, each product is carefully selected to deliver a premium gifting experience for clients, employees, and business partners."
       />
 
       <Galary images={galleryImages} />
@@ -102,7 +101,4 @@ function Calendar() {
   );
 }
 
-export default Calendar;
-
-
-
+export default TechGift;

@@ -15,84 +15,82 @@ const galleryFiles = import.meta.glob(
   }
 );
 
-    
 
 const galleryImages = [
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Premium Clothing",
+    title: "Modern Fashion Collection",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Luxury Wear",
+    title: "Elegant Clothing Style",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Design",
-    title: "Minimal Look",
+    category: "Casual Wear",
+    title: "Comfort Fashion",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Premium Fabric",
+    title: "Quality Materials",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Designer Collection",
+    title: "Contemporary Clothing",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Fashion Trends",
+    title: "Latest Collection",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Luxury Style",
+    title: "Premium Outfit",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Daily Wear",
+    title: "Modern Comfort",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Exclusive",
+    title: "Special Collection",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Fashion Studio",
+    title: "Creative Designs",
   },
-  
 ];
 
 
-function Calendar() {
+function Clothing() {
   return (
     <>
       <ProductBanner
-        title="Calendar"
+        title="Clothing"
         image={banner}
       />
 
       <ProductIntro
-        title="Premium Calendar Collection"
-        description="Our premium calendar collection is thoughtfully designed to combine functionality with refined aesthetics. Crafted using high-quality materials and modern manufacturing standards, each calendar delivers durability, elegance, and reliable performance, making it an ideal choice for contemporary residential and commercial spaces."
+        title="Premium Clothing Collection"
+        description="Our premium clothing collection is designed with a perfect blend of comfort, style, and quality. Crafted using superior fabrics and modern techniques, every piece reflects elegance, durability, and contemporary fashion trends for everyday and special occasions."
       />
 
       <Galary images={galleryImages} />
@@ -102,7 +100,4 @@ function Calendar() {
   );
 }
 
-export default Calendar;
-
-
-
+export default Clothing;

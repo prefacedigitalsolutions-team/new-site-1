@@ -6,6 +6,7 @@ import ModernStatic from "../../../components/NewStatic/ModernStatic";
 import banner from "../../../assets/images/hero/home-banar-2.jpg";
 import aboutImage from "../../../assets/images/hero/home-banar-2.jpg";
 
+
 // Auto import all hero images
 const galleryFiles = import.meta.glob(
   "../../images/hero/*.{jpg,jpeg,png,webp}",
@@ -15,84 +16,82 @@ const galleryFiles = import.meta.glob(
   }
 );
 
-    
 
 const galleryImages = [
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Premium Mugs",
+    title: "Elegant Coffee Mug Collection",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Corporate Gifts",
+    title: "Branded Mug Design",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Design",
-    title: "Minimal Look",
+    category: "Ceramic Collection",
+    title: "Premium Ceramic Mug",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Custom Printing",
+    title: "Personalized Mug",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Luxury Range",
+    title: "Modern Mug Collection",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Office Essentials",
+    title: "Professional Mug Series",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Premium Finish",
+    title: "Designer Coffee Mug",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Daily Use",
+    title: "Comfort Handle Mug",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Gift Collection",
+    title: "Special Edition Mug",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Exclusive Collection",
+    title: "Premium Corporate Mug",
   },
-  
 ];
 
 
-function Calendar() {
+function Mugs() {
   return (
     <>
       <ProductBanner
-        title="Calendar"
+        title="Mugs"
         image={banner}
       />
 
       <ProductIntro
-        title="Premium Calendar Collection"
-        description="Our premium calendar collection is thoughtfully designed to combine functionality with refined aesthetics. Crafted using high-quality materials and modern manufacturing standards, each calendar delivers durability, elegance, and reliable performance, making it an ideal choice for contemporary residential and commercial spaces."
+        title="Premium Mug Collection"
+        description="Our premium mug collection is designed to bring together style, quality, and functionality. Crafted with high-quality materials and modern designs, these mugs are perfect for corporate gifting, branding, and everyday use."
       />
 
       <Galary images={galleryImages} />
@@ -102,7 +101,4 @@ function Calendar() {
   );
 }
 
-export default Calendar;
-
-
-
+export default Mugs;

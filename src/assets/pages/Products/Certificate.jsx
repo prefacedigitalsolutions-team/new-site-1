@@ -6,6 +6,7 @@ import ModernStatic from "../../../components/NewStatic/ModernStatic";
 import banner from "../../../assets/images/hero/home-banar-2.jpg";
 import aboutImage from "../../../assets/images/hero/home-banar-2.jpg";
 
+
 // Auto import all hero images
 const galleryFiles = import.meta.glob(
   "../../images/hero/*.{jpg,jpeg,png,webp}",
@@ -15,84 +16,82 @@ const galleryFiles = import.meta.glob(
   }
 );
 
-    
 
 const galleryImages = [
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Premium Certificates",
+    title: "Elegant Certificate Designs",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Corporate Awards",
+    title: "Professional Recognition",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Design",
-    title: "Minimal Look",
+    category: "Achievement",
+    title: "Premium Certificate Frame",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Custom Design",
+    title: "Personalized Certificates",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Luxury Collection",
+    title: "Exclusive Certificate Range",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Business Recognition",
+    title: "Corporate Certificate Solutions",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Premium Finish",
+    title: "Designer Certificate Collection",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Institutional",
+    title: "Academic Certificates",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Special Awards",
+    title: "Recognition Certificates",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Customized Range",
+    title: "Premium Certificate Designs",
   },
-  
 ];
 
 
-function Calendar() {
+function Certificate() {
   return (
     <>
       <ProductBanner
-        title="Calendar"
+        title="Certificates"
         image={banner}
       />
 
       <ProductIntro
-        title="Premium Calendar Collection"
-        description="Our premium calendar collection is thoughtfully designed to combine functionality with refined aesthetics. Crafted using high-quality materials and modern manufacturing standards, each calendar delivers durability, elegance, and reliable performance, making it an ideal choice for contemporary residential and commercial spaces."
+        title="Premium Certificate Collection"
+        description="Our premium certificate collection is designed to provide a professional and elegant way to recognize achievements, awards, and milestones. Crafted with high-quality materials and refined finishing, each certificate represents excellence and appreciation."
       />
 
       <Galary images={galleryImages} />
@@ -102,7 +101,4 @@ function Calendar() {
   );
 }
 
-export default Calendar;
-
-
-
+export default Certificate;

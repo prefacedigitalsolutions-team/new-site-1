@@ -6,6 +6,7 @@ import ModernStatic from "../../../components/NewStatic/ModernStatic";
 import banner from "../../../assets/images/hero/home-banar-2.jpg";
 import aboutImage from "../../../assets/images/hero/home-banar-2.jpg";
 
+
 // Auto import all hero images
 const galleryFiles = import.meta.glob(
   "../../images/hero/*.{jpg,jpeg,png,webp}",
@@ -15,84 +16,82 @@ const galleryFiles = import.meta.glob(
   }
 );
 
-    
 
 const galleryImages = [
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Premium Trophy",
+    title: "Elegant Trophy Collection",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Corporate Awards",
+    title: "Professional Recognition Trophy",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Design",
-    title: "Minimal Look",
+    category: "Achievement Awards",
+    title: "Premium Achievement Trophy",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Sports Trophy",
+    title: "Championship Trophy Design",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Luxury Range",
+    title: "Exclusive Award Collection",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Corporate Gifts",
+    title: "Customized Trophy Designs",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Premium Finish",
+    title: "Designer Trophy Series",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Recognition",
+    title: "Award Memento Collection",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Special Awards",
+    title: "Custom Trophy Solutions",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Exclusive Collection",
+    title: "Premium Trophy Designs",
   },
-  
 ];
 
 
-function Calendar() {
+function Trophy() {
   return (
     <>
       <ProductBanner
-        title="Calendar"
+        title="Trophy & Awards"
         image={banner}
       />
 
       <ProductIntro
-        title="Premium Calendar Collection"
-        description="Our premium calendar collection is thoughtfully designed to combine functionality with refined aesthetics. Crafted using high-quality materials and modern manufacturing standards, each calendar delivers durability, elegance, and reliable performance, making it an ideal choice for contemporary residential and commercial spaces."
+        title="Premium Trophy & Award Collection"
+        description="Our premium trophy and award collection is designed to celebrate achievements, success, and excellence. Crafted with elegant designs and high-quality finishes, our trophies are perfect for corporate events, sports competitions, employee recognition, and special occasions."
       />
 
       <Galary images={galleryImages} />
@@ -102,7 +101,4 @@ function Calendar() {
   );
 }
 
-export default Calendar;
-
-
-
+export default Trophy;

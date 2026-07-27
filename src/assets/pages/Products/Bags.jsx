@@ -6,6 +6,7 @@ import ModernStatic from "../../../components/NewStatic/ModernStatic";
 import banner from "../../../assets/images/hero/home-banar-2.jpg";
 import aboutImage from "../../../assets/images/hero/home-banar-2.jpg";
 
+
 // Auto import all hero images
 const galleryFiles = import.meta.glob(
   "../../images/hero/*.{jpg,jpeg,png,webp}",
@@ -15,84 +16,82 @@ const galleryFiles = import.meta.glob(
   }
 );
 
-    
 
 const galleryImages = [
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Premium Bags",
+    title: "Luxury Bag Collection",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Corporate Bags",
+    title: "Professional Carry Solutions",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Design",
-    title: "Minimal Look",
+    category: "Travel Collection",
+    title: "Comfort Travel Bags",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Daily Essentials",
+    title: "Stylish Utility Bags",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Executive Range",
+    title: "Premium Office Bags",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "large",
-    category: "Premium Collection",
-    title: "Modern Calendar Design",
+    category: "Fashion Collection",
+    title: "Modern Designer Bags",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "tall",
-    category: "Luxury Finish",
-    title: "Elegant Product",
+    category: "Business Solutions",
+    title: "Corporate Branding Bags",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Backpacks",
+    title: "Premium Backpack Series",
   },
-   {
+  {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "small",
-    category: "Quality",
-    title: "Premium Details",
+    category: "Gift Collection",
+    title: "Exclusive Gift Bags",
   },
   {
     image: galleryFiles["../../images/hero/home-banar-2.jpg"],
     className: "wide",
-    category: "Interior Style",
-    title: "Contemporary Experience",
+    category: "Luxury Collection",
+    title: "Customized Premium Bags",
   },
-  
 ];
 
 
-function Calendar() {
+function Bags() {
   return (
     <>
       <ProductBanner
-        title="Calendar"
+        title="Bags"
         image={banner}
       />
 
       <ProductIntro
-        title="Premium Calendar Collection"
-        description="Our premium calendar collection is thoughtfully designed to combine functionality with refined aesthetics. Crafted using high-quality materials and modern manufacturing standards, each calendar delivers durability, elegance, and reliable performance, making it an ideal choice for contemporary residential and commercial spaces."
+        title="Premium Bag Collection"
+        description="Our premium bag collection is designed to combine durability, functionality, and modern style. Crafted with quality materials and thoughtful designs, these bags are ideal for corporate gifting, travel, daily use, and brand promotions."
       />
 
       <Galary images={galleryImages} />
@@ -102,7 +101,4 @@ function Calendar() {
   );
 }
 
-export default Calendar;
-
-
-
+export default Bags;
