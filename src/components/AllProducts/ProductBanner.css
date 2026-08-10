@@ -1,7 +1,11 @@
+
+
+/*Banar section start */
+
 .product-banner {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     min-height: 500px;
 
     display: flex;
@@ -13,27 +17,9 @@
     overflow: hidden;
 }
 
-/* Smooth Top Overlay */
-.product-banner::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0,0,0,.42) 0%,
-            rgba(0,0,0,.26) 8%,
-            rgba(0,0,0,.14) 18%,
-            rgba(0,0,0,.06) 28%,
-            rgba(0,0,0,0) 150px
-        );
-
-}
 
 /* Premium Shine Layer */
+
 .product-banner::after{
     content: "";
     position: absolute;
@@ -110,18 +96,58 @@
 
 
 
-@media (max-width:768px){
+@media (max-width: 991px) {
 
-    .product-banner{
-        height:50vh;
-        min-height:320px;
+    .product-banner {
+        height: 70vh;
+        min-height: 450px;
+
+        background-position: center center;
     }
 
-    .product-banner h1{
-        left:6%;
-        top:60%;
-        font-size:34px;
-        letter-spacing:1px;
+    .product-banner h1 {
+        left: 7%;
+        top: 58%;
+
+        font-size: clamp(40px, 7vw, 62px);
+        line-height: 1.05;
+
+        letter-spacing: 0.8px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .product-banner {
+        margin-top: 10vh;
+        width: 100%;
+        height: 25vh;
+        min-height: 250px;
+
+        background-position: center center;
+        background-size: cover;
+    }
+
+
+
+    /* Banner Title */
+
+    .product-banner h1 {
+        left: 6%;
+        right: 6%;
+
+        top: 75%;
+
+        transform: translateY(-50%);
+
+        font-size: 30px;
+
+        line-height: 1.08;
+        letter-spacing: 0.5px;
+
+        text-align: left;
     }
 
 }
+

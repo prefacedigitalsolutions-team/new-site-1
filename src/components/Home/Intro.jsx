@@ -1,6 +1,9 @@
 import "./Intro.css";
+import { useNavigate } from "react-router-dom";
+import aboutImage from "../../assets/images/bags/paper-bag.jpg";
 
 const Intro = () => {
+  const navigate = useNavigate();
   return (
     <section className="why-choose-us-section">
       <div className="wcu-container">
@@ -53,13 +56,13 @@ const Intro = () => {
             </li>
           </ul>
 
-          <button
-            className="wcu-btn"
-            data-aos="zoom-in"
-            data-aos-delay="600"
-          >
-            Learn More
-          </button>
+         <button
+           className="wcu-btn"
+             data-aos="zoom-in"
+             data-aos-delay="600"
+             onClick={() => navigate("/about")} >
+              Learn More
+              </button>
         </div>
 
         {/* Right Image Side */}
@@ -71,10 +74,7 @@ const Intro = () => {
           <div className="wcu-border-box"></div>
 
           <img
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600"
-            alt="Business meeting"
-            className="wcu-image"
-          />
+              src={aboutImage}  alt="Business meeting" className="wcu-image"/>
         </div>
 
       </div>

@@ -8,35 +8,35 @@ export const menuData = [
       {
         name: "Wall Calendar",
         type: "hash",
-        path: "/products/calendar",
+        path: "/products/Stationary",
         hash: "wall-calendar"
       },
 
       {
         name: "Desktop Calendar",
         type: "hash",
-        path: "/products/calendar",
+        path: "/products/Stationary",
         hash: "desktop-calendar"
       },
 
       {
         name: "Diary",
         type: "hash",
-        path: "/products/calendar",
+        path: "/products/Stationary",
         hash: "diary"
       },
 
       {
         name: "Notebook",
         type: "hash",
-        path: "/products/calendar",
+        path: "/products/Stationary",
         hash: "notebook"
       },
 
       {
         name: "Premium Pen With Branding",
         type: "hash",
-        path: "/products/calendar",
+        path: "/products/Stationary",
         hash: "premium-pen"
       }
 
@@ -312,49 +312,48 @@ export const menuData = [
 
 
 
-
-
 {
   title: "Trophy & Award",
 
   items: [
-
-
     {
       name: "Crystal Trophies",
-      type: "page",
-      path: "/products/Trophy"
+      type: "hash",
+      path: "/products/Trophy",
+      hash: "crystal-trophies"
     },
 
     {
       name: "Mementos",
-      type: "page",
-      path: "/products/trophy"
+      type: "hash",
+      path: "/products/Trophy",
+      hash: "mementos"
     },
 
     {
       name: "Star trophy",
-      type: "page",
-      path: "/products/others"
+      type: "hash",
+      path: "/products/Trophy",
+      hash: "star-trophy"
     },
 
     {
       name: "Metal Trophy",
-      type: "page",
-      path: "/products/new"
+      type: "hash",
+      path: "/products/Trophy",
+      hash: "metal-trophy"
     },
-
 
     {
       name: "Planters Mini",
       type: "hash",
-       path: "/products/Planters",
+      path: "/products/Planters",
       hash: "planters"
     }
-
-
   ]
 },
+
+
 
 
 ];

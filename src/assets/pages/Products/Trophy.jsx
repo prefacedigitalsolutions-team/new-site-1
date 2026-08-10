@@ -1,92 +1,93 @@
+
 import ProductBanner from "../../../components/AllProducts/ProductBanner";
 import ProductIntro from "../../../components/AllProducts/Intro";
 import Galary from "../../../components/AllProducts/Galary";
 import ModernStatic from "../../../components/NewStatic/ModernStatic";
 
-import banner from "../../../assets/images/hero/home-banar-2.jpg";
-import aboutImage from "../../../assets/images/hero/home-banar-2.jpg";
+// Banner image
+import banner from "../../../assets/images/trophy/trophy-banar-1.jpg";
 
+// Static image
+import aboutImage from "../../../assets/images/trophy/start-trophy.jpg";
 
-// Auto import all hero images
-const galleryFiles = import.meta.glob(
-  "../../images/hero/*.{jpg,jpeg,png,webp}",
+// Automatically import all trophy images
+const trophyImages = import.meta.glob(
+  "../../images/trophy/*.{jpg,jpeg,png,webp}",
   {
     eager: true,
     import: "default",
   }
 );
 
-
 const galleryImages = [
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: trophyImages["../../images/trophy/mementors.jpg"],
     className: "large",
-    category: "Premium Trophy",
-    title: "Elegant Trophy Collection",
+    category: "Premium",
+    title: "mementors",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: trophyImages["../../images/trophy/trophy-long.jpg"],
     className: "tall",
     category: "Corporate Awards",
     title: "Professional Recognition Trophy",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: trophyImages["../../images/trophy/metal-trophy.jpg"],
     className: "small",
-    category: "Achievement Awards",
-    title: "Premium Achievement Trophy",
+    category: "Awards",
+    title: "Trophy",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: trophyImages["../../images/trophy/metal-trophy-2.jpg"],
     className: "small",
-    category: "Sports Trophy",
-    title: "Championship Trophy Design",
+    category: "metal",
+    title: "Trophy",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: trophyImages["../../images/trophy/mementos.jpg"],
     className: "wide",
     category: "Luxury Range",
     title: "Exclusive Award Collection",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: trophyImages["../../images/trophy/start-trophy.jpg"],
     className: "large",
     category: "Corporate Gifts",
     title: "Customized Trophy Designs",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: trophyImages["../../images/trophy/metal-trophy-l.jpg"],
     className: "tall",
     category: "Premium Finish",
     title: "Designer Trophy Series",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: trophyImages["../../images/trophy/kabaddi.jpg"],
     className: "small",
-    category: "Recognition",
-    title: "Award Memento Collection",
+    category: "Trophy",
+    title: "kabaddi",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: trophyImages["../../images/trophy/match-trophy.jpg"],
     className: "small",
-    category: "Special Awards",
-    title: "Custom Trophy Solutions",
+     category: "Trophy",
+    title: "Cricket",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: trophyImages["../../images/trophy/start-trophy-1.jpg"],
     className: "wide",
     category: "Exclusive Collection",
     title: "Premium Trophy Designs",
   },
 ];
 
-
 function Trophy() {
   return (
     <>
       <ProductBanner
-        title="Trophy & Awards"
         image={banner}
+        title="Trophy"
       />
 
       <ProductIntro
@@ -102,3 +103,4 @@ function Trophy() {
 }
 
 export default Trophy;
+

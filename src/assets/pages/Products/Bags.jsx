@@ -1,92 +1,93 @@
+
 import ProductBanner from "../../../components/AllProducts/ProductBanner";
 import ProductIntro from "../../../components/AllProducts/Intro";
 import Galary from "../../../components/AllProducts/Galary";
 import ModernStatic from "../../../components/NewStatic/ModernStatic";
 
-import banner from "../../../assets/images/hero/home-banar-2.jpg";
-import aboutImage from "../../../assets/images/hero/home-banar-2.jpg";
+// Banner image
+import banner from "../../../assets/images/bags/bag-banar-1.jpg";
 
+// Static image
+import aboutImage from "../../../assets/images/bags/bag-banar-1.jpg";
 
-// Auto import all hero images
-const galleryFiles = import.meta.glob(
-  "../../images/hero/*.{jpg,jpeg,png,webp}",
+// Automatically import all bag images
+const bagImages = import.meta.glob(
+  "../../images/bags/*.{jpg,jpeg,png,webp}",
   {
     eager: true,
     import: "default",
   }
 );
 
-
 const galleryImages = [
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: bagImages["../../images/bags/back-pack.jpg"],
     className: "large",
     category: "Premium Bags",
     title: "Luxury Bag Collection",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: bagImages["../../images/bags/bag-02.jpg"],
     className: "tall",
     category: "Corporate Bags",
     title: "Professional Carry Solutions",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: bagImages["../../images/bags/lether-bag.jpg"],
     className: "small",
     category: "Travel Collection",
     title: "Comfort Travel Bags",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: bagImages["../../images/bags/jute-bag.jpg"],
     className: "small",
     category: "Daily Essentials",
     title: "Stylish Utility Bags",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: bagImages["../../images/bags/canvas-bag.jpg"],
     className: "wide",
     category: "Executive Range",
     title: "Premium Office Bags",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: bagImages["../../images/bags/tote-bag.jpg"],
     className: "large",
     category: "Fashion Collection",
     title: "Modern Designer Bags",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: bagImages["../../images/bags/tote-bag-1.jpg"],
     className: "tall",
     category: "Business Solutions",
     title: "Corporate Branding Bags",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: bagImages["../../images/bags/paper-bag.jpg"],
     className: "small",
     category: "Backpacks",
     title: "Premium Backpack Series",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: bagImages["../../images/bags/laptop-bag.jpg"],
     className: "small",
     category: "Gift Collection",
     title: "Exclusive Gift Bags",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: bagImages["../../images/bags/bag-4.jpg"],
     className: "wide",
     category: "Luxury Collection",
     title: "Customized Premium Bags",
   },
 ];
 
-
 function Bags() {
   return (
     <>
       <ProductBanner
-        title="Bags"
         image={banner}
+        title="Bag"
       />
 
       <ProductIntro
@@ -102,3 +103,4 @@ function Bags() {
 }
 
 export default Bags;
+

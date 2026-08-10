@@ -1,92 +1,93 @@
+
 import ProductBanner from "../../../components/AllProducts/ProductBanner";
 import ProductIntro from "../../../components/AllProducts/Intro";
 import Galary from "../../../components/AllProducts/Galary";
 import ModernStatic from "../../../components/NewStatic/ModernStatic";
 
-import banner from "../../../assets/images/hero/home-banar-2.jpg";
-import aboutImage from "../../../assets/images/hero/home-banar-2.jpg";
+// Banner image
+import banner from "../../../assets/images/tech-gift/tech-gift-banar-1.jpg";
 
+// Static image
+import aboutImage from "../../../assets/images/tech-gift/power-bank.jpg";
 
-// Auto import all hero images
+// Auto import all Tech Gift images
 const galleryFiles = import.meta.glob(
-  "../../images/hero/*.{jpg,jpeg,png,webp}",
+  "../../images/tech-gift/*.{jpg,jpeg,png,webp}",
   {
     eager: true,
     import: "default",
   }
 );
 
-
 const galleryImages = [
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: galleryFiles["../../images/tech-gift/power-bank.jpg"],
     className: "large",
     category: "Tech Collection",
     title: "Premium Tech Accessories",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: galleryFiles["../../images/tech-gift/usb.jpg"],
     className: "tall",
     category: "Smart Gadgets",
     title: "Modern Technology Gifts",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: galleryFiles["../../images/tech-gift/phone-stand.jpg"],
     className: "small",
     category: "Corporate Gifts",
     title: "Branded Tech Products",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: galleryFiles["../../images/tech-gift/wall-clock.jpg"],
     className: "small",
     category: "Innovation",
     title: "Smart Office Essentials",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: galleryFiles["../../images/tech-gift/usb-2.jpg"],
     className: "wide",
     category: "Premium Range",
     title: "Exclusive Tech Collection",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: galleryFiles["../../images/tech-gift/digital-clock-pen.jpg"],
     className: "large",
     category: "Digital Accessories",
     title: "Next Generation Gadgets",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: galleryFiles["../../images/tech-gift/phone-stand-1.jpg"],
     className: "tall",
     category: "Corporate Solutions",
     title: "Professional Tech Gifts",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: galleryFiles["../../images/tech-gift/digital-clock-1.jpg"],
     className: "small",
     category: "Daily Use",
     title: "Useful Tech Accessories",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: galleryFiles["../../images/tech-gift/wall-clock-1.jpg"],
     className: "small",
     category: "Premium Gifts",
     title: "Luxury Tech Items",
   },
   {
-    image: galleryFiles["../../images/hero/home-banar-2.jpg"],
+    image: galleryFiles["../../images/tech-gift/power-bank-1.jpg"],
     className: "wide",
     category: "Exclusive Collection",
     title: "Advanced Technology Gifts",
   },
 ];
 
-
 function TechGift() {
   return (
     <>
       <ProductBanner
-        title="Tech Gifts"
         image={banner}
+        title="Gift"
       />
 
       <ProductIntro
@@ -102,3 +103,4 @@ function TechGift() {
 }
 
 export default TechGift;
+

@@ -11,24 +11,19 @@
 .galary-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 260px;
+    grid-auto-rows: 240px;
     gap: 22px;
 }
 
-/* =======================================================
-   GALARY CARD (GSAP Optimizations Added)
-======================================================= */
+/* galary card  */
 .galary-card {
     position: relative;
     overflow: hidden;
     border-radius: 2px;
     cursor: pointer;
     box-shadow: 0 15px 40px rgba(0,0,0,.12);
-    
-    /* FIX 1: Kisi bhi tarah ka unintended transition block karne ke liye */
+
     transition: none !important; 
-    
-    /* FIX 2: Browser ke GPU ko activate karne ke liye taaki scroll smooth ho */
     will-change: transform, opacity;
     transform: translate3d(0, 0, 0);
 }
@@ -37,7 +32,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* FIX 3: Transition ko explicitly transform par target kiya taaki layout properties ko disturb na kare */
+
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -45,9 +40,7 @@
     transform: scale(1.08);
 }
 
-/* =======================================================
-   Overlay (No changes to your styles, just performance safe)
-======================================================= */
+/* overlay */
 .galary-overlay {
     position: absolute;
     left: 0;
@@ -66,7 +59,7 @@
         rgba(0, 0, 0, 0.12) 70%,
         rgba(0, 0, 0, 0) 100%
     );
-    /* Safe side pointer events none kiya hai taaki GSAP trigger par hover issue na kare */
+ 
     pointer-events: none; 
 }
 
@@ -91,9 +84,7 @@
     color: #eee;
 }
 
-/* =======================================================
-   Different Layout & Media Queries (As they were)
-======================================================= */
+/* different layout = */
 .large {
     grid-column: span 3;
     grid-row: span 2;
@@ -107,22 +98,187 @@
     grid-column: span 2;
 }
 
-@media(max-width:991px) {
+
+@media (max-width: 991px) {
+
+    .galary-section {
+        padding: 80px 0;
+    }
+
+    .galary-section .container {
+        width: 94%;
+    }
+
     .galary-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media(max-width:767px) {
-    .galary-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 300px;
+        grid-auto-rows: 220px;
+        gap: 18px;
     }
 
-    .large,
-    .tall,
-    .wide {
+
+    /* LARGE */
+
+    .galary-grid .large {
+        grid-column: span 2;
+        grid-row: span 2;
+        min-height: 440px;
+    }
+
+
+    /* TALL */
+
+    .galary-grid .tall {
+        grid-column: span 1;
+        grid-row: span 2;
+        min-height: 440px;
+    }
+
+
+    /* SMALL */
+
+    .galary-grid .small {
         grid-column: span 1;
         grid-row: span 1;
+        min-height: 220px;
     }
+
+
+    /* WIDE */
+
+    .galary-grid .wide {
+        grid-column: span 2;
+        grid-row: span 1;
+        min-height: 220px;
+    }
+
+
+    .galary-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
 }
+
+
+
+
+@media (max-width: 767px) {
+
+    .galary-section {
+        padding: 55px 0;
+    }
+
+    .galary-section .container {
+        width: 92%;
+    }
+
+    .galary-grid {
+
+        display: grid;
+
+        /*
+         * Mobile me 2 columns rakhe hain
+         * taaki original size difference maintain rahe
+         */
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-auto-rows: 150px;
+
+        gap: 14px;
+    }
+
+
+    /* ===================================================
+       LARGE
+       2 columns + 2 rows
+    =================================================== */
+
+    .galary-grid .large {
+        grid-column: span 2;
+        grid-row: span 2;
+
+        height: 314px;
+        min-height: 314px;
+    }
+
+
+    /* ===================================================
+       TALL
+       1 column + 2 rows
+    =================================================== */
+
+    .galary-grid .tall {
+        grid-column: span 1;
+        grid-row: span 2;
+
+        height: 314px;
+        min-height: 314px;
+    }
+
+
+    /* ===================================================
+       SMALL
+       1 column + 1 row
+    =================================================== */
+
+    .galary-grid .small {
+        grid-column: span 1;
+        grid-row: span 1;
+
+        height: 150px;
+        min-height: 150px;
+    }
+
+
+    /* ===================================================
+       WIDE
+       2 columns + 1 row
+    =================================================== */
+
+    .galary-grid .wide {
+        grid-column: span 2;
+        grid-row: span 1;
+
+        height: 150px;
+        min-height: 150px;
+    }
+
+
+    /* IMAGE */
+
+    .galary-card img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+    /* OVERLAY */
+
+    .galary-overlay {
+        height: 90px;
+        padding: 12px 15px;
+    }
+
+    .galary-overlay span {
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+    }
+
+    .galary-overlay h3 {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .galary-overlay p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+}
+
