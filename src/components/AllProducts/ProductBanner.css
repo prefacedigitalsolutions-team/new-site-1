@@ -1,0 +1,153 @@
+
+
+/*Banar section start */
+
+.product-banner {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+/* Premium Shine Layer */
+
+.product-banner::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background: linear-gradient(
+        115deg,
+        transparent 28%,
+        rgba(255,255,255,0.04) 38%,
+        rgba(255,255,255,0.12) 45%,
+        rgba(255,255,255,0.28) 50%,
+        rgba(255,255,255,0.12) 55%,
+        rgba(255,255,255,0.04) 62%,
+        transparent 72%
+    );
+
+    background-size: 280% 100%;
+    background-repeat: no-repeat;
+
+    animation: bannerShine 4.5s ease-in-out infinite;
+}
+
+@keyframes bannerShine{
+
+    0%{
+        background-position: 220% 0;
+        opacity: 0;
+    }
+
+    12%{
+        opacity: .9;
+    }
+
+    50%{
+        opacity: .55;
+    }
+
+    100%{
+        background-position: -120% 0;
+        opacity: 0;
+    }
+
+}
+
+    
+
+/* Banner Title */
+
+.product-banner h1{
+    position:absolute;
+    left:8%;
+    top:58%;
+    transform:translateY(-50%);
+
+    z-index:2;
+
+    color:#fff;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(44px,6vw,74px);
+    font-weight:600;
+
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-align:left;
+    line-height:1.05;
+
+    text-shadow:
+        0 8px 25px rgba(0,0,0,.35),
+        0 18px 45px rgba(0,0,0,.18);
+}
+
+
+
+@media (max-width: 991px) {
+
+    .product-banner {
+        height: 70vh;
+        min-height: 450px;
+
+        background-position: center center;
+    }
+
+    .product-banner h1 {
+        left: 7%;
+        top: 58%;
+
+        font-size: clamp(40px, 7vw, 62px);
+        line-height: 1.05;
+
+        letter-spacing: 0.8px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .product-banner {
+        margin-top: 10vh;
+        width: 100%;
+        height: 25vh;
+        min-height: 250px;
+
+        background-position: center center;
+        background-size: cover;
+    }
+
+
+
+    /* Banner Title */
+
+    .product-banner h1 {
+        left: 6%;
+        right: 6%;
+
+        top: 75%;
+
+        transform: translateY(-50%);
+
+        font-size: 30px;
+
+        line-height: 1.08;
+        letter-spacing: 0.5px;
+
+        text-align: left;
+    }
+
+}
+

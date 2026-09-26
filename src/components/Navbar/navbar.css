@@ -1,0 +1,493 @@
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav bar section start */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 0;
+    z-index: 999;
+    transition: all .4s ease;
+}
+
+.navbar.sticky {
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, .90);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .30);
+}
+
+/* Default container - Desktop ke liye */
+.navbar-container {
+    width: min(92%, 1300px);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 150px;
+    display: block;
+}
+
+/* Main Menu Links */
+.navbar-menu > ul {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.navbar-menu > ul > li {
+    position: relative;
+}
+
+.navbar-menu > ul > li > a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 0;
+    position: relative;
+    transition: .35s ease;
+    overflow: hidden;
+}
+
+/* Header Links Underline Effect */
+.navbar-menu > ul > li > a::before {
+    content: "";
+    position: absolute;
+    left: -50%;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background: #d6b06d;
+    transition: .35s ease;
+}
+
+.navbar-menu > ul > li > a::after {
+    content: "";
+    position: absolute;
+    right: -50%;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background: #d6b06d;
+    transition: .35s ease;
+}
+
+.navbar-menu > ul > li:hover > a,
+.navbar-menu > ul > li > a.active {
+    color: #d6b06d;
+}
+
+.navbar-menu > ul > li:hover > a::before,
+.navbar-menu > ul > li > a.active::before {
+    left: 0;
+}
+
+.navbar-menu > ul > li:hover > a::after,
+.navbar-menu > ul > li > a.active::after {
+    right: 0;
+}
+
+/* PRODUCTS BUTTON - DESKTOP */
+.navbar-menu > ul > li > .dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 0;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    transition: .35s ease;
+}
+
+/* Dropdown Corner Design */
+.mega-dropdown::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: 200px;  
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mega-dropdown.force-show::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mega-dropdown {
+    position: static !important;
+}
+
+/* Outer Wrapper for Shutters */
+.dropdown-shutter-bg {
+    margin-top: -10px;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88vw;
+    max-width: 1600px;
+    height: 370px; 
+    pointer-events: none;
+    z-index: 998;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.shutter-left, .shutter-right {
+    position: absolute;
+    top: 0;
+    width: 50.5%; 
+    height: 100%;
+    background: #ffffff;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.shutter-left {
+    left: 0;
+    transform: translateX(-101.5%); 
+}
+
+.shutter-right {
+    right: 0;
+    transform: translateX(101.5%); 
+}
+
+/* Mega Menu Grid Container */
+.mega-menu-content {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translate(-50%, 15px);
+    width: min(95vw, 1150px);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.45s ease, visibility 0.3s ease;
+}
+
+.mega-dropdown.force-show .dropdown-shutter-bg {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mega-dropdown.force-show .shutter-left,
+.mega-dropdown.force-show .shutter-right {
+    transform: translateX(0); 
+}
+
+.mega-dropdown.force-show .mega-menu-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.mega-column h3 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(214, 176, 109, 0.4); 
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.mega-column ul li {
+    margin-bottom: 6px;
+    margin-left: 5px;
+}
+
+.mega-column ul li a {
+    position: relative;
+    font-size: 13.5px;
+    color: #475569;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 1px;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mega-column ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50.5%;
+    width: 50.5%;
+    height: 100%;
+    background: #0f172a; 
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out;
+    z-index: -1;
+    transform-origin: left;
+    opacity: 0; 
+}
+
+.mega-column ul li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50.5%;
+    width: 50.5%;
+    height: 100%;
+    background: #0f172a;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out;
+    z-index: -1;
+    transform-origin: right;
+    opacity: 0;
+}
+
+.mega-column ul li a:hover::before,
+.mega-column ul li a.active-dropdown-link::before {
+    transform: translateX(100%);
+    opacity: 1; 
+}
+
+.mega-column ul li a:hover::after,
+.mega-column ul li a.active-dropdown-link::after {
+    transform: translateX(-100%);
+    opacity: 1; 
+}
+
+.mega-column ul li a:hover,
+.mega-column ul li a.active-dropdown-link {
+    color: #d6b06d !important;
+    font-weight: 600;
+}
+
+/* Toggle Hamburger structure */
+.menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #fff;
+    margin: 5px auto;
+    transition: .35s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ================= MOBILE RESPONSIVE FIX (SCROLL SE PEHLE AUR BAAD DONO KE LIYE) ================= */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        padding: 12px 0 !important;
+        background: #000000 !important;
+    }
+
+    .navbar.sticky {
+        padding: 10px 0 !important;
+        background: rgba(0, 0, 0, 0.95) !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Yaha container ki width 100% aur proper side spacing (padding: 0 16px) di gayi hai */
+    .navbar-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .navbar-logo img {
+        width: 120px !important;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        flex-shrink: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .navbar-menu {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: #0f172a !important;
+        max-height: 0 !important;
+        overflow-y: auto !important;
+        visibility: hidden !important;
+        transition: max-height 0.35s ease-in-out, visibility 0.35s ease !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .navbar-menu.active {
+        max-height: 80vh !important;
+        visibility: visible !important;
+    }
+
+    .navbar-menu > ul {
+        width: 90% !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+        padding: 15px 0 !important;
+    }
+
+    .navbar-menu > ul > li > a {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 0 !important;
+        color: #ffffff !important;
+        font-size: 15px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .mega-dropdown::before,
+    .navbar-menu > ul > li > a::before,
+    .navbar-menu > ul > li > a::after,
+    .dropdown-shutter-bg {
+        display: none !important;
+    }
+
+    .mega-menu-content {
+        position: static !important;            
+        transform: none !important;    
+        width: 100% !important;
+        background: #1e293b !important;
+        border-radius: 4px !important;
+        padding: 12px !important;
+        margin-top: 8px !important;
+        display: none !important; 
+        grid-template-columns: 1fr !important; 
+        gap: 15px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .mega-dropdown.force-show .mega-menu-content {
+        display: grid !important; 
+    }
+
+    .mega-column h3 {
+        font-size: 13px !important;
+        color: #d6b06d !important;
+        margin-left: 0 !important;
+        margin-bottom: 8px !important;
+        padding-bottom: 4px !important;
+        border-bottom: 1px solid rgba(214, 176, 109, 0.2) !important;
+    }
+
+    .mega-column ul li a {
+        color: #cbd5e1 !important;
+        font-size: 14px !important;
+        padding: 8px 10px !important;
+        display: block !important;
+        border-radius: 4px !important;
+        background: transparent !important;
+    }
+
+    .mega-column ul li a::before,
+    .mega-column ul li a::after {
+        display: none !important;
+    }
+
+    .mega-column ul li a:hover,
+    .mega-column ul li a.active-dropdown-link {
+        background: rgba(214, 176, 109, 0.1) !important;
+        color: #d6b06d !important;
+    }
+
+    /* PRODUCTS BUTTON - MOBILE */
+    .navbar-menu > ul > li > .dropdown-btn {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-header !important;
+        align-items: center !important;
+        padding: 12px 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        outline: none !important;
+        color: #ffffff !important;
+        font-family: inherit !important;
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        text-align: left !important;
+        cursor: pointer !important;
+    }
+}
