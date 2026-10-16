@@ -1,10 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link"; // HashLink ko wapas import karein
 import { useEffect, useState } from "react";
 
 import "./navbar.css";
 import logo from "../../assets/images/logo.png";
-
 import { menuData } from "./menuData";
 
 function Navbar() {
@@ -20,7 +19,6 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -45,6 +43,7 @@ function Navbar() {
 
       <header className={`navbar ${sticky ? "sticky" : ""}`}>
         <div className="navbar-container">
+
           {/* LOGO */}
           <div className="navbar-logo">
             <Link to="/" onClick={closeMenu}>
@@ -64,7 +63,7 @@ function Navbar() {
                 </Link>
               </li>
 
-              {/* PRODUCTS */}
+              {/* PRODUCTS DROPDOWN */}
               <li
                 className={`dropdown mega-dropdown ${
                   serviceOpen ? "force-show" : ""
@@ -97,7 +96,6 @@ function Navbar() {
                   <i className="fa-solid fa-angle-down"></i>
                 </button>
 
-                {/* SHUTTER BACKGROUND */}
                 <div className="dropdown-shutter-bg">
                   <div className="shutter-left"></div>
                   <div className="shutter-right"></div>
@@ -108,44 +106,75 @@ function Navbar() {
                   {menuData.map((menu, index) => (
                     <div className="mega-column" key={index}>
                       <h3>{menu.title}</h3>
+
                       <ul>
-                        {menu.items.map((item) => (
-                          <li key={item.name}>
-                            {item.type === "hash" ? (
-                              <HashLink
-                                smooth
-                                to={`${item.path}#${item.hash}`}
-                                className={
-                                  location.pathname === item.path &&
-                                  location.hash === `#${item.hash}`
-                                    ? "active-dropdown-link"
-                                    : ""
-                                }
-                                onClick={handleDropdownLinkClick}
-                              >
+                        {menu.items.map((item) => {
+                          // Clean absolute path for HashLink to prevent double routing bugs
+                          const cleanPath = item.path.startsWith("/")
+                            ? item.path
+                            : `/${item.path}`;
+
+                          return (
+                            <li key={item.name}>
+                              {item.type === "hash" ? (
+                                <HashLink
+                                  smooth
+                                  to={`${cleanPath}#${item.hash}`}
+                                  className={
+                                    location.pathname === item.path &&
+                                    location.hash === `#${item.hash}`
+                                      ? "active-dropdown-link"
+                                      : ""
+                                  }
+                                  onClick={handleDropdownLinkClick}
+                                >
                                 {item.name}
-                              </HashLink>
-                            ) : (
-                              <Link
-                                to={item.path}
-                                className={
-                                  location.pathname === item.path
-                                    ? "active-dropdown-link"
-                                    : ""
-                                }
-                                onClick={handleDropdownLinkClick}
-                              >
+                                </HashLink>
+                              ) : (
+                                <Link
+                                  to={cleanPath}
+                                  className={
+                                    location.pathname === item.path
+                                      ? "active-dropdown-link"
+                                      : ""
+                                  }
+                                  onClick={handleDropdownLinkClick}
+                                >
                                 {item.name}
-                              </Link>
-                            )}
-                          </li>
-                        ))}
+                                </Link>
+                              )}
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   ))}
                 </div>
               </li>
 
+              {/* DOWNLOAD */}
+              <li>
+                <Link
+                  to="/download"
+                  className={location.pathname === "/download" ? "active" : ""}
+                  onClick={closeMenu}
+                >
+                  Download Catalogue
+                </Link>
+              </li>
+
+              {/* BLOG */}
+              <li>
+                <Link
+                  to="/blog"
+                  className={location.pathname === "/blog" ? "active" : ""}
+                  onClick={closeMenu}
+                >
+                  Blogs
+                </Link>
+              </li>
+
+              {/* CONTACT */}
               <li>
                 <Link
                   to="/contact"
@@ -155,10 +184,13 @@ function Navbar() {
                   Contact us
                 </Link>
               </li>
+
+              <li className="navbar-phone">
+                <a href="tel:+917827797247">+91-7827797247</a>
+              </li>
             </ul>
           </nav>
 
-          {/* MOBILE BUTTON - FIXED CLASS BINDING */}
           <button
             type="button"
             className={`menu-toggle ${menuOpen ? "active" : ""}`}
@@ -173,6 +205,7 @@ function Navbar() {
             <span></span>
             <span></span>
           </button>
+
         </div>
       </header>
     </>

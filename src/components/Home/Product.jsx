@@ -3,7 +3,7 @@ import "./Product.css";
 
 import img1 from "../../assets/images/stationary/calendar-1.jpg";
 import img2 from "../../assets/images/hero/product-diary-1.jpg";
-import img3 from "../../assets/images/bags/bag-02.jpg";
+import img3 from "../../assets/images/hero/jute-bag.jpg";
 import img4 from "../../assets/images/hero/product-shirt-1.jpg";
 import img5 from "../../assets/images/hero/product-mouse-pad.jpg";
 import img6 from "../../assets/images/hero/product-pen.jpg";
@@ -65,7 +65,7 @@ function Product() {
           </span>
 
           <h2 className="product-gallery-title">
-            Explore Our Products
+            Customisation Options:<br></br> Put Your Brand on Every Gift
           </h2>
         </div>
 

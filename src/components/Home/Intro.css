@@ -5,12 +5,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 100px 20px;
 
-    background-image: linear-gradient(
-      rgba(207, 206, 206, 0.90), 
-      rgba(207, 206, 206, 0.98)
-    ),
-    url('/src/assets/images/bg-1.jpg');
-  background-color: #cacaca;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,29 +25,30 @@
 }
 
 .wcu-heading {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 700;
-  color: #1e2d4a; 
-  margin-bottom: 20px;
+  color: #050505;  
+  margin-bottom: 0px;
   letter-spacing: 0.5px;
 }
 
 .text-highlight {
-  color: #96703b; 
+  color: #302f2f; 
 }
 
 .wcu-description {
   color: #1f1e1e;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.6;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 /* List Styling */
 .wcu-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 35px 0;
+  margin: 0px 0 55px 0;
+ 
 }
 
 .wcu-list li {
@@ -67,8 +63,10 @@
   width: 18px;
   height: 18px;
   margin-right: 12px;
+  margin-top: 15px;
   color:  #1f1e1e;
   flex-shrink: 0;
+
 }
 
 /* Button styling */
@@ -76,11 +74,11 @@
     position: relative;
     display: inline-block;
     background: #fff;
-    color: #030303;
+    color: #c90808;
     border: 1px solid #000;   
     padding: 12px 45px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     cursor: pointer;
     overflow: hidden;
     z-index: 1;
@@ -128,7 +126,7 @@
 
 .wcu-image {
     width: 90%;
-    height: 350px;     
+    height: 550px;     
     object-fit: cover;  
     z-index: 2;
     display: block;
@@ -165,8 +163,8 @@
 
 .wcu-icon {
     color: #e54b3b;
-    font-size: 20px;
-    margin-top: 3px;
+    font-size: 21px;
+    margin-top: 0px;
     flex-shrink: 0;
 }
 

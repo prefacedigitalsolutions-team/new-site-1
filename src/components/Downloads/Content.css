@@ -1,0 +1,90 @@
+
+
+.download-content-section {
+  width: 100%;
+  background: linear-gradient(135deg, #0b1329 0%, #111c38 100%);
+  padding: 100px 6%;
+  box-sizing: border-box;
+  opacity: 0; /* GSAP initial state */
+}
+
+.download-content-container {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: left; /* Left aligned layout */
+}
+
+.download-sub-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(37, 99, 235, 0.15);
+  color: #60a5fa;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  border-radius: 1px;
+  margin-bottom: 20px;
+}
+
+.download-content-container h2 {
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.download-content-container p {
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 720px;
+}
+
+.download-btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* High-end Corporate Download Button */
+.corporate-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid #3b82f6;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+}
+
+.corporate-download-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);
+}
+
+.corporate-download-btn i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.corporate-download-btn:hover i {
+  transform: translateY(3px); 
+}
+
+
+@media (max-width: 768px) {
+  .download-content-section {
+    padding: 70px 5%;
+  }
+}

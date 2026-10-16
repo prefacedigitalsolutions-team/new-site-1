@@ -1,13 +1,20 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 import App from "./App.jsx";
+//import "./index.css";
+                                                                         
+// Dynamic basename: Production par '/new-site-1' rahega, local par '' rahega
+const basename = import.meta.env.MODE === "production" ? "/new-site-1" : "";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <HelmetProvider>
+      <BrowserRouter basename={basename}>
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>
 );

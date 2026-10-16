@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
 
-    width: 90%;
+    width: 85%;
     max-width: 1400px;
     margin: auto;
 }
@@ -135,10 +135,10 @@
 
     text-transform: uppercase;
 
-    max-width: 700px;
+    max-width: 400px;
 }
 
-/* Tablet */
+
 @media (max-width:991px) {
 
     .title-content h2 {
@@ -147,7 +147,7 @@
 
 }
 
-/* Mobile */
+
 @media (max-width:768px) {
 
     .static-image {
@@ -161,7 +161,7 @@
     }
 
     .title-content h2 {
-        font-size: 32px;
+        font-size: 25px;
     }
 
     @keyframes waterFlow {

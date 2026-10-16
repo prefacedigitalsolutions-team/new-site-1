@@ -99,41 +99,6 @@ gsap.registerPlugin(ScrollTrigger);
 // PRODUCT DATA - EXACTLY 
 
 const products = [
-{
-  id: 1,
-  category: "TABLE CALENDAR",
-  title: "EXECUTIVE TABLE CALENDAR 01",
-  size: 'Standard Table Calendar Size',
-  paper: "Premium Quality Paper",
-  binding: "Wire-O Bound",
-  planner: "Monthly Calendar",
-  finish: "UV Varnished",
-  box: "Matching Box",
-  image: diary01, // YOUR IMAGE 01
-},
-
-{
-  id: 2,
-  category: "PREMIUM PEN",
-  title: "PREMIUM EXECUTIVE PEN 02",
-  finish: "Premium Finish",
-  packaging: "Matching Box",
-  image: diary02, // YOUR IMAGE 02
-},
-
-{
-  id: 3,
-  category: "CORPORATE COLLECTION",
-  title: "CLASSIC OFFICE PEN 03",
-  size: '7" x 9.5" (apx.)',
-  paper: "",
-  binding: "",
-  planner: "",
-  finish: "Matt Lamination",
-  box: "Matching Box",
-  image: diary03, // YOUR IMAGE 03
-},
-
 
 {
   id: 4,
@@ -300,30 +265,8 @@ const products = [
   image: diary14, // YOUR IMAGE 14
 },
 
-{
-  id: 16,
-  category: "WRITING PAD",
-  title: "WRITING PAD 16",
-  size: '3.25" X 5"',
-  paper: "",
-  binding: "",
-  planner: "",
-  finish: "",
-  box: "",
-  image: diary15, // YOUR IMAGE 15
-},
-{
-  id: 17,
-  category: "CUBIC PAD",
-  title: "CUBIC PAD 17",
-  size: '4.25" X 4.25"',
-  paper: "",
-  binding: "",
-  planner: "",
-  finish: "",
-  box: "",
-  image: diary17, // YOUR IMAGE 17
-},
+
+
 
 {
   id: 18,
@@ -338,7 +281,7 @@ const products = [
   image: diary20, // YOUR IMAGE 20
 },
 
-
+   
 
   {
   id: 19,
@@ -350,7 +293,7 @@ const products = [
   planner: "",
   finish: "",
   box: "",
-    image: diary21, // YOUR IMAGE 21
+  image: diary21, // YOUR IMAGE 21
   },
 
  {
@@ -450,19 +393,6 @@ const products = [
   image: diary24, // YOUR IMAGE 24
 },
 
-{
-  id: 27,
-  category: "EXCLUSIVE SET",
-  title: "EXCLUSIVE SET 27",
-  size: "",
-  paper: "",
-  binding: "",
-  planner: "",
-  finish: "",
-  box: "",
-  image: diary25, // YOUR IMAGE 25
-},
-
 
 {
   id: 28,
@@ -557,6 +487,35 @@ const products = [
   image: diary29, // YOUR IMAGE 29
 },
 
+
+{
+  id: 38,
+  category: "",
+  title: "38",
+  size: "",
+  paper: "",
+  binding: "",
+  planner: "",
+  finish: "",
+  box: "",
+  image: diary38,
+},
+
+
+{
+  id: 39,
+  category: "",
+  title: "39",
+  size: "",
+  paper: "",
+  binding: "",
+  planner: "",
+  finish: "",
+  box: "",
+  image: diary39,
+},
+
+
 {
   id: 35,
   category: "WRITING PAD",
@@ -582,6 +541,81 @@ category: "WRITING PAD",
   image: diary31, // YOUR IMAGE 31
 },
 
+
+{
+  id: 16,
+  category: "WRITING PAD",
+  title: "WRITING PAD 16",
+  size: '3.25" X 5"',
+  paper: "",
+  binding: "",
+  planner: "",
+  finish: "",
+  box: "",
+  image: diary15, // YOUR IMAGE 15
+},
+
+
+ {
+  id: 40,
+  category: "",
+  title: "40",
+  size: "",
+  paper: "",
+  binding: "",
+  planner: "",
+  finish: "",
+  box: "",
+  image: diary40,
+},
+
+
+
+
+
+
+{
+  id: 27,
+  category: "Wall Calendar",
+  title: "Wall Calendar 27",
+  size: "",
+  paper: "",
+  binding: "",
+  planner: "",
+  finish: "",
+  box: "",
+  image: diary25, // YOUR IMAGE 25
+},
+
+
+{
+  id: 1,
+  category: "TABLE CALENDAR",
+  title: "TABLE CALENDAR 01",
+  size: 'Standard Table Calendar Size',
+  paper: "Premium Quality Paper",
+  binding: "Wire-O Bound",
+  planner: "Monthly Calendar",
+  finish: "UV Varnished",
+  box: "Matching Box",
+  image: diary01, // YOUR IMAGE 01
+},
+
+
+{
+  id: 17,
+  category: "PREMIUM EXECUTIVE PEN",
+  title: "PREMIUM EXECUTIVE PEN 17",
+  size: '4.25" X 4.25"',
+  paper: "",
+  binding: "",
+  planner: "",
+  finish: "",
+  box: "",
+  image: diary17, // YOUR IMAGE 17
+},
+
+
 {
   id: 37,
   category: "WRITING PAD",
@@ -595,57 +629,41 @@ category: "WRITING PAD",
   image: diary34, // YOUR IMAGE 34
 },
 
+{
+  id: 3,
+  category: "CORPORATE COLLECTION",
+  title: "CLASSIC OFFICE PEN 03",
+  size: '7" x 9.5" (apx.)',
+  paper: "",
+  binding: "",
+  planner: "",
+  finish: "Matt Lamination",
+  box: "Matching Box",
+  image: diary03, // YOUR IMAGE 03
+},
 
 
 
 {
-  id: 38,
-  category: "",
-  title: "38",
-  size: "",
-  paper: "",
-  binding: "",
-  planner: "",
-  finish: "",
-  box: "",
-  image: diary38,
+  id: 2,
+  category: "PREMIUM PEN",
+  title: "PREMIUM EXECUTIVE PEN 02",
+  finish: "Premium Finish",
+  packaging: "Matching Box",
+  image: diary02, // YOUR IMAGE 02
 },
 
-{
-  id: 39,
-  category: "",
-  title: "39",
-  size: "",
-  paper: "",
-  binding: "",
-  planner: "",
-  finish: "",
-  box: "",
-  image: diary39,
-},
- {
-  id: 40,
-  category: "",
-  title: "40",
-  size: "",
-  paper: "",
-  binding: "",
-  planner: "",
-  finish: "",
-  box: "",
-  image: diary40,
-},
+
+
 ];
 
-// =====================================================
+
 // PAGINATION
-// =====================================================
 
 const PRODUCTS_PER_PAGE = 20;
 
-// =====================================================
 // COMPONENT
-// =====================================================
+
 
 function Diary() {
   const diaryRef = useRef(null);
@@ -655,9 +673,7 @@ function Diary() {
   const [selectedProduct, setSelectedProduct] =
     useState(null);
 
-  // ===================================================
   // PAGINATION DATA
-  // ===================================================
 
   const totalPages = Math.ceil(
     products.length / PRODUCTS_PER_PAGE
@@ -671,9 +687,7 @@ function Diary() {
     startIndex + PRODUCTS_PER_PAGE
   );
 
-  // ===================================================
   // CHANGE PAGE
-  // ===================================================
 
   const changePage = (page) => {
     if (page < 1 || page > totalPages) {
@@ -689,9 +703,7 @@ function Diary() {
     });
   };
 
-  // ===================================================
   // GSAP SCROLL ANIMATION
-  // ===================================================
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -728,9 +740,7 @@ function Diary() {
     return () => ctx.revert();
   }, [currentPage]);
 
-  // ===================================================
   // ESCAPE KEY
-  // ===================================================
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -752,9 +762,7 @@ function Diary() {
     };
   }, []);
 
-  // ===================================================
   // BODY SCROLL LOCK
-  // ===================================================
 
   useEffect(() => {
     document.body.style.overflow =
@@ -765,9 +773,7 @@ function Diary() {
     };
   }, [selectedProduct]);
 
-  // ===================================================
   // RETURN
-  // ===================================================
 
   return (
     <>
@@ -918,9 +924,7 @@ function Diary() {
         </div>
       </section>
 
-      {/* =================================================
-          DETAILS MODAL
-      ================================================= */}
+      {/* DETAILS MODAL*/}
 
       {selectedProduct && (
         <div

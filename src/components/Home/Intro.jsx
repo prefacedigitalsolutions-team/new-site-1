@@ -11,7 +11,7 @@ const Intro = () => {
         {/* Left Content Side */}
         <div className="wcu-content" data-aos="fade-right">
           <h2 className="wcu-heading" data-aos="fade-up">
-            <span className="text-highlight">WHY</span> CHOOSE US
+            <span className="text-highlight">What we make</span>
           </h2>
 
           <p
@@ -19,41 +19,45 @@ const Intro = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-            porttitor purus ac tellus auctor auctor. Nulla tincidunt lobortis
-            aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Cras porttitor purus ac tellus auctor auctor. Nulla tincidunt
-            lobortis aliquam.
+         Custom Diaries & Notebook, Desk Accessories, Steel Bottles & Drinkware,
+            Paper Carry Bags, & Employee ID Cards & Ready-to-send <br></br>kits For Onboarding, Festivals & Events.
           </p>
 
           <ul className="wcu-list">
+            <h3>How it works:</h3>
             <li data-aos="fade-up" data-aos-delay="200">
               <i className="bi bi-check-circle-fill wcu-icon"></i>
+               
               <span>
-                Lorem ipsum dolor sit amet adipiscing elit. Tur adipiscing elit.
+               
+                Choose your products or tell us your budget.
               </span>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="300">
               <i className="bi bi-check-circle-fill wcu-icon"></i>
               <span>
-                Lorem ipsum dolor sit amet adipiscing elit. Tur adipiscing elit.
+               We prepare a mockup with your logo.
               </span>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
               <i className="bi bi-check-circle-fill wcu-icon"></i>
               <span>
-                Lorem ipsum dolor sit amet adipiscing elit. Tur adipiscing elit.
+               You approve the design, and we produce and pack.
               </span>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="500">
               <i className="bi bi-check-circle-fill wcu-icon"></i>
               <span>
-                Lorem ipsum dolor sit amet adipiscing elit. Tur adipiscing elit.
+                We deliver to your office or directly to your recipients.
               </span>
             </li>
+
+            <h3><br></br>Why choose us:</h3>
+            <p>In-house Design Support, Bulk Pricing, A Sample Before Confirmed
+              Order, <br></br>& One Team Handling Design, Printing & Delivery.</p>
           </ul>
 
          <button
@@ -61,7 +65,7 @@ const Intro = () => {
              data-aos="zoom-in"
              data-aos-delay="600"
              onClick={() => navigate("/about")} >
-              Learn More
+               Get a Free Quote
               </button>
         </div>
 

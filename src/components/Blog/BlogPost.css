@@ -1,0 +1,237 @@
+/* BlogPost.css */
+
+.blog-post-article {
+  background: #494949;
+  padding: 140px 20px 80px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.blog-post-container {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 50px 60px;
+  border-radius: 1px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.blog-header {
+  margin-bottom: 25px;
+}
+
+.blog-category-badge {
+  display: inline-block;
+  background: #e2e8f0;
+  color: #2d3748;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.blog-title {
+  font-size: 2.4rem;
+  color: #1a202c;
+  line-height: 1.25;
+  margin: 18px 0 12px;
+  font-weight: 800;
+}
+
+.blog-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #718096;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.blog-image-wrapper {
+  margin: 35px -60px;
+  overflow: hidden;
+  border-top: 1px solid #edf2f7;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.blog-image {
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-content-body {
+  color: #2d3748;
+  line-height: 1.85;
+  font-size: 1.1rem;
+}
+
+.blog-intro {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #4a5568;
+  margin-bottom: 35px;
+  border-left: 4px solid #3182ce;
+  padding-left: 20px;
+  background: #f7fafc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0 8px 8px 0;
+}
+
+.blog-tier-card {
+  margin-bottom: 24px;
+  background: #fdfdfd;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.blog-tier-card:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.blog-tier-title {
+  color: #1a202c;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.blog-tier-desc {
+  color: #4a5568;
+  margin: 0;
+}
+
+.blog-steps-list,
+.blog-ideas-list,
+.blog-tips-list {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.blog-step-item,
+.blog-idea-item {
+  margin-bottom: 14px;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.blog-tips-box {
+  background: #f0fff4;
+  border-left: 4px solid #38a169;
+  padding: 25px;
+  border-radius: 0 12px 12px 0;
+  margin: 35px 0;
+}
+
+.blog-tips-title {
+  color: #22543d;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.blog-tip-item {
+  margin-bottom: 8px;
+  color: #2f855a;
+}
+
+.blog-caution-box {
+  font-style: italic;
+  color: #7b341e;
+  background: #fffaf0;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  border-left: 4px solid #dd6b20;
+  margin: 30px 0;
+}
+
+.blog-cta-box {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: #fff;
+  padding: 40px;
+  border-radius: 1px;
+  margin-top: 50px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.blog-cta-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.blog-cta-button {
+  display: inline-block;
+  background: #ffffff;
+  color: #1a202c;
+  padding: 12px 30px;
+  border-radius: 1px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-cta-button:hover {
+  background-color: #edf2f7;
+  transform: translateY(-2px);
+}
+
+.blog-back-link-wrapper {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid #edf2f7;
+}
+
+.blog-back-link {
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.blog-back-link:hover {
+  color: #2b6cb0;
+  text-decoration: underline;
+}
+
+.blog-not-found {
+  padding: 160px 20px;
+  text-align: center;
+  min-height: 70vh;
+  background-color: #f4f6f9;
+}
+
+.blog-not-found-desc {
+  color: #718096;
+  margin: 15px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-post-container {
+    padding: 25px 20px;
+  }
+  .blog-image-wrapper {
+    margin: 25px -20px;
+  }
+  .blog-title {
+    font-size: 1.8rem;
+  }
+}

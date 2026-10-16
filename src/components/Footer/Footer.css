@@ -153,10 +153,31 @@
   text-decoration: underline;
 }
 
-/* Responsive Alignment */
 @media (max-width: 768px) {
+  .footer-middle {
+    padding: 40px 20px 30px;
+  }
+
+  .footer-grid-container {
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-col h3 {
+    margin-bottom: 12px;
+  }
+
   .bottom-container {
     flex-direction: column;
     text-align: center;
+    gap: 8px;
+    font-size: 11px;
   }
 }

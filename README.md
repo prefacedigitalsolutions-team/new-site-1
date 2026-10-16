@@ -1,12 +1,12 @@
 
-# Phototography
+# corporate gifting solutions
 
-A modern React + Vite website project.
+A modern React +  Vite website project.
 
 ## Features
 
 - Responsive Design
-- React Components
+- React Components 
 - Fast Development with Vite
 - Clean Project Structure
 
@@ -22,3 +22,7 @@ A modern React + Vite website project.
 
 ```bash
 npm install
+
+
+
+

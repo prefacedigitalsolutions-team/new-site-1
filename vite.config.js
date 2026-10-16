@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ mode }) => ({
+// https://vitejs.dev/config/
+export default defineConfig({
   plugins: [react()],
-  base: mode === 'production' ? '/new-site-1/' : '/',
-}))
+  // Best for Hostinger, Vercel, and GitHub Pages
+  base: './',
+})

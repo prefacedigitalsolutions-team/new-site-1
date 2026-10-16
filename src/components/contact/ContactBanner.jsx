@@ -4,10 +4,14 @@ const ContactBanner = () => {
   return (
     <section className="contact-banner">
       {/* Left half image container */}
-      <div className="banner-split left-side"></div>
+      <div className="banner-split left-side">
+        <div className="top-overlay"></div>
+      </div>
       
       {/* Right half image container */}
-      <div className="banner-split right-side"></div>
+      <div className="banner-split right-side">
+        <div className="top-overlay"></div>
+      </div>
 
       <div className="contact-banner-overlay">
         <div className="container">

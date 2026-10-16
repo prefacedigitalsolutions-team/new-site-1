@@ -1,0 +1,232 @@
+
+
+.blog-section {
+  width: 100%;
+  padding: 80px 6%;
+  background: #0b1329; /* Deep Professional Navy Blue */
+  position: relative;
+  box-sizing: border-box;
+}
+
+.blog-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.blog-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.blog-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 50px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.blog-header h2 {
+  font-size: clamp(34px, 4vw, 46px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.blog-header p {
+  font-size: 17px;
+  color: #94a3b8;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid System */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Luxury Card Styling with 1px Sharp Border */
+.blog-card {
+  background: #111c38; /* Slightly lighter navy card background */
+  border: 1px solid #1e293b; /* Crisp 1px corporate border */
+  border-radius: 1px; /* Sharp 1px border radius as requested */
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  border-color: #3b82f6; /* Glow border on hover */
+  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.25);
+}
+
+/* Image Container */
+.blog-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+}
+
+.blog-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.blog-card:hover .blog-img-wrapper img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+/* Category Badge */
+.blog-category {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(11, 19, 41, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #60a5fa;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 1px;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Content Panel */
+.blog-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: #111c38;
+}
+
+.blog-date {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.blog-content h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.blog-content h3 a {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s ease, color 0.2s ease;
+}
+
+.blog-content h3 a:hover {
+  color: #60a5fa;
+  background-size: 100% 2px;
+}
+
+.blog-content p {
+  font-size: 15px;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+/* Professional Action Link */
+.blog-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #60a5fa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.blog-read-more i {
+  font-size: 12px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blog-read-more:hover {
+  color: #93c5fd;
+  gap: 12px;
+}
+
+.blog-read-more:hover i {
+  color: #93c5fd;
+  transform: translateX(4px);
+}
+
+
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 80px 5%;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-content {
+    padding: 22px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .blog-header {
+    text-align: left;
+    padding: 0 20px;
+  }
+  .blog-header h2 {
+    font-size: clamp(24px, 5vw, 32px);
+    text-align: left;
+  }
+}

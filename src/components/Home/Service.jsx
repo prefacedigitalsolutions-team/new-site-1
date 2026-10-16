@@ -9,30 +9,40 @@ import img5 from "../../assets/images/hero/service-tshirt-1.jpg";
 import img6 from "../../assets/images/hero/photo-banar-02.jpg";
 
 const originalServices = [
-  {
-    id: 1,
-    title: "Corporate Gifts",
-    icon: "bi bi-gift",
-    image: img1,
-    tag: "Bespoke Packaging",
-    description: "Premium corporate gifting solutions designed to strengthen your brand identity and build lasting client relationships.",
+
+
+   {
+    id: 6,
+    title: "Executive Diary/Notebook",
+    icon: "bi bi-stars",
+    image: img6,
+    tag: "High Impact",
+    description: "Creative promotional merchandise that helps businesses leave a memorable impression.",
   },
-  {
-    id: 2,
-    title: "Calendars",
-    icon: "bi bi-calendar3",
-    image: img2,
-    tag: "Premium Print",
-    description: "Beautifully designed wall and table calendars for businesses, offices and promotional campaigns.",
-  },
-  {
-    id: 3,
-    title: "Diaries & Notebooks",
-    icon: "bi bi-journal-bookmark",
-    image: img3,
-    tag: "Luxury Leather",
-    description: "Luxury diaries and notebooks crafted with premium materials for professionals and executives.",
-  },
+ {
+  id: 1,
+  title: "Paper Carry Bags",
+  icon: "bi bi-bag-check",
+  image: img1,
+  tag: "Eco-Friendly Packaging",
+  description: "Premium custom paper carry bags designed to showcase your brand, elevate the unboxing experience, and leave a lasting impression.",
+},
+{
+  id: 2,
+  title: "Drinkware-Custom Branding",
+  icon: "bi bi-pen",
+  image: img2,
+  tag: "Desk Accessories",
+  description: "Premium custom-engraved and printed pens designed to project elegance and keep your brand top of mind every day.",
+},
+ {
+  id: 3,
+  title: "Employee/Student ID Cards",
+  icon: "bi bi-person-badge",
+  image: img3,
+  tag: "Institutional Essentials",
+  description: "Durable and custom-printed smart ID cards designed for schools, colleges, and institutions crisp branding.",
+},
   {
     id: 4,
     title: "Awards & Trophies",
@@ -41,22 +51,15 @@ const originalServices = [
     tag: "Precision Crafted",
     description: "Elegant awards and trophies to celebrate achievements and recognize excellence in every event.",
   },
-  {
-    id: 5,
-    title: "Office Essentials",
-    icon: "bi bi-briefcase",
-    image: img5,
-    tag: "Executive Suite",
-    description: "Premium office accessories including organizers, pen stands, desk products and executive collections.",
-  },
-  {
-    id: 6,
-    title: "Promotional Products",
-    icon: "bi bi-stars",
-    image: img6,
-    tag: "High Impact",
-    description: "Creative promotional merchandise that helps businesses leave a memorable impression.",
-  },
+{
+  id: 5,
+  title: "T-Shirts with Branding",
+  icon: "bi bi-person-workspace",
+  image: img5,
+  tag: "Branded Apparel",
+  description: "High-quality custom printed and embroidered polo and round-neck T-shirts designed for corporate teams, events, and brand uniforms.",
+},
+ 
 ];
 
 function Service() {
@@ -170,7 +173,7 @@ function Service() {
         <div className="studio-top-bar" data-aos="fade-up">
           <div className="studio-title-group">
             <span className="studio-subtitle">// EXPERTISE</span>
-            <h2>Capabilities & Services</h2>
+            <h2>We help companies, schools and event teams create branded gifts people actually keep. Design, production and delivery from one Delhi team.</h2>
           </div>
 
           <div className="studio-nav-controls">
@@ -258,7 +261,7 @@ function Service() {
 
                         <a href="#quote" className="studio-premium-link">
                           <span className="link-text">
-                            Request Tailored Proposal
+                            Request Proposal
                           </span>
                           <span className="link-arrow-wrapper">
                             <i className="bi bi-arrow-right-short dynamic-arrow"></i>

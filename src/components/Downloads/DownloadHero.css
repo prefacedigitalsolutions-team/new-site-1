@@ -1,0 +1,77 @@
+.download-hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 500px;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+  /* Initial state for GSAP smooth mounting */
+  opacity: 0; 
+}
+
+/* Unique classes for DownloadHero split */
+.download-split {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url("../../assets/images/catalogue-banner.jpg");
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: downloadSlideIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.download-left {
+  left: 0;
+  background-position: left center;
+}
+
+.download-right {
+  right: 0;
+  background-position: right center;
+}
+
+/* Smooth gradient overlay jo top se start hoke naturally fade ho jayega */
+.download-top-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Unique Animation Keyframes */
+@keyframes downloadSlideIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .download-hero-section {
+    height: 75vh;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-hero-section {
+    height: 60vh;
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-hero-section {
+    height: 50vh;
+    min-height: 300px;
+  }
+}

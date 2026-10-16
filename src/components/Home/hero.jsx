@@ -10,41 +10,33 @@ import heroSmall2 from "../../assets/images/hero/usb.jpg";
 function Hero() {
   const containerRef = useRef(null);
 
-  // GSAP Animation section start
-
+  // GSAP Animation section (Removed .hero-buttons reference)
   useGSAP(() => {
     // 1. Initial Hidden States
     gsap.set(".hero-bg-circle", { scale: 0.7, opacity: 0 });
     gsap.set(".hero-badge", { opacity: 0, y: 30 });
     gsap.set(".title-line span", { y: "100%" });
-    gsap.set([".hero-text", ".hero-buttons", ".hero-bottom", ".hero-scroll"], { opacity: 0, y: 30 });
+    gsap.set([".hero-text", ".hero-bottom", ".hero-scroll"], { opacity: 0, y: 30 });
     
     gsap.set(".hero-main-image", { scale: 1.15, opacity: 0 });
     gsap.set(".hero-floating", { scale: 0.8, opacity: 0, y: 40 });
     gsap.set(".hero-card", { scale: 0.7, opacity: 0 });
 
-    // 2. Premium Timeline Sequence (Cinematic entrance)
+    // 2. Timeline Sequence
     const tl = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.4 } });
 
     tl.to(".hero-bg-one", { scale: 1, opacity: 0.15, duration: 2 })
       .to(".hero-bg-two", { scale: 1, opacity: 0.05, duration: 2 }, "-=1.5")
       .to(".hero-badge", { opacity: 1, y: 0, duration: 1 }, "-=1.8")
-      
-      // Text reveal effect from mask
       .to(".title-line span", { y: "0%", stagger: 0.15 }, "-=1.5")
-      
-      // Left elements
       .to(".hero-text", { opacity: 1, y: 0, duration: 1 }, "-=1.2")
-      .to(".hero-buttons", { opacity: 1, y: 0, duration: 1 }, "-=1.1")
       .to(".hero-bottom", { opacity: 1, y: 0, duration: 1 }, "-=1.0")
-      
-      // Smooth Image Entrance
       .to(".hero-main-image", { opacity: 1, scale: 1, duration: 1.8 }, "-=1.6")
       .to(".hero-floating", { opacity: 1, scale: 1, y: 0, stagger: 0.2 }, "-=1.3")
       .to(".hero-card", { scale: 1, opacity: 1, ease: "back.out(1.7)" }, "-=0.8")
       .to(".hero-scroll", { opacity: 1, y: 0 }, "-=0.6");
 
-    // 3. Continuous Luxury Floating Loops (hava me tairne vala live look)
+    // 3. Floating Loops
     gsap.to(".hero-floating-one", {
       y: "-=15",
       rotation: 1,
@@ -74,11 +66,6 @@ function Hero() {
 
   }, { scope: containerRef });
 
-  {/* End gsap section*/}
-
-
-  {/* Bnaar section Start */}
-
   return (
     <section className="hero" ref={containerRef}>
       <div className="hero-bg-circle hero-bg-one"></div>
@@ -88,22 +75,20 @@ function Hero() {
         
         {/* LEFT CONTENT */}
         <div className="hero-left">
-          <span className="hero-badge">Corporate Gifting Soloutions</span>
+          <span className="hero-badge">Corporate Gifts Branding</span>
 
           <h1 className="hero-title">
-            <div className="title-line"><span>CAPTURE</span></div>
-            <div className="title-line"><span>THE</span></div>
-            <div className="title-line"><span>EXTRAORDINARY</span></div>
+            <div className="title-line"><span>YOUR CORORATE GIFTING &</span></div>
+            <div className="title-line"><span>MERCHANDIES</span></div>
+            <div className="title-line"><span>PARTNER</span></div>
           </h1>
 
           <p className="hero-text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur qui beatae accusamus ab sed natus.
+            <span>BRANDED MERCHANDISE IN DELHI NCR<br /></span>
+            We are a Delhi-based team of designers and production specialists who help organisations say thank you in a way that carries their brand. Because design, printing and delivery are handled together, you get consistent quality and one point of contact from the first mockup to the final delivery.
+            <br /><br />
+            A good corporate gift keeps your brand on someone desk long after the meeting ends. We at Corporate Gifting Solutions, design, brand and deliver custom merchandise for companies, schools, colleges and event teams, from a single diary to a thousand welcome kits
           </p>
-
-          <div className="hero-buttons">
-            <button className="hero-btn hero-btn-dark">Read More</button>
-            
-          </div>
 
           <div className="hero-bottom">
             <div className="hero-stat">

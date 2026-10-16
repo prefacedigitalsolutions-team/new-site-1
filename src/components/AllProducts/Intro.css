@@ -1,7 +1,7 @@
 
 .product-intro {
     padding: 120px 0 0 0px;
-    background: #cfcece;
+    background: #ffffff;
     overflow: hidden;
 }
 
@@ -24,24 +24,7 @@
     flex-direction: column;
 }
 
-.intro-title-block .sub-tag {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #000000;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
 
-.intro-title-block .intro-title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 50px; 
-    font-weight: 600; 
-    color: #111111;
-    line-height: 1.1;
-    margin: 0;
-    letter-spacing: -0.5px;
-}
 
 /* right column */
 .intro-desc-wrapper {
@@ -91,6 +74,32 @@
     text-align: justify;
 }
 
+.intro-desc-wrapper .intro-desc span {
+    font-size: 16px;
+    line-height: 1.85;
+    color: #8a2f2f;
+    margin: 0;
+    font-weight: 400;
+    text-align: justify;
+}
+
+
+/* Left side text styling */
+.intro-left-text {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #222222;
+    font-weight: 400;
+}
+
+.quote-btn {
+      font-size: 1.1rem; 
+      font-weight: 600;
+       color: #192ee9;
+        border-radius: 8px; 
+        text-decoration: none;
+     }
 
 @media (max-width: 991px) {
     .intro-split-grid {
@@ -154,3 +163,181 @@
         left: 120%;
     }
 }
+
+
+
+
+/* All section sytart intro*/
+.intro-title {
+    font-family: "Cormorant Garamond", serif;
+  font-size: clamp(28px, 2vw, 41px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+  max-width: 900px;
+  margin: 0 0 16px;
+  color: #17212b;
+}
+
+/* ===== INTRO PARAGRAPH ===== */
+.intro-paragraph {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #596575;
+  margin: 0 0 20px;
+  max-width: 100%;
+}
+
+/* ===== SECTION CARDS ===== */
+.customisation-highlights {
+  margin-top: 14px;
+  padding: 17px 19px;
+  background: #f8f9fb;
+  border: 1px solid #e7eaf0;
+  border-radius: 8px;
+  min-width: 0;
+}
+
+/* ===== SECTION HEADINGS ===== */
+.highlights-title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #192633;
+  margin: 0 0 12px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e1e5eb;
+}
+
+/* ===== BULLET LIST ===== */
+.highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlights-list li {
+  position: relative;
+  padding-left: 17px;
+  margin-bottom: 7px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #536171;
+  overflow-wrap: anywhere;
+}
+
+.highlights-list li:last-child {
+  margin-bottom: 0;
+}
+
+.highlights-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ad8956;
+}
+
+.highlights-list strong {
+  color: #202c38;
+  font-weight: 650;
+}
+
+/* ===== QUOTE BUTTON ===== */
+.quote-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 17px;
+  padding: 8px 25px;
+  color: #000000;
+  text-decoration: none;
+  border: 1px solid #17212b;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 650;
+  transition: background 0.2s ease;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1024px) {
+  .customisation-highlights {
+    padding: 15px 17px;
+    margin-top: 12px;
+  }
+
+  .highlights-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+  }
+
+  .highlights-list li {
+    font-size: 13px;
+    line-height: 1.52;
+    margin-bottom: 6px;
+  }
+
+  .intro-paragraph {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1023px) {
+  .intro-title {
+    font-size: clamp(27px, 4vw, 35px);
+  }
+
+  .customisation-highlights {
+    padding: 15px;
+  }
+
+  .highlights-list li {
+    font-size: 13.5px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .intro-title {
+    font-size: 25px !important;
+    line-height: 1.22;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+  }
+
+  .intro-paragraph {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+
+  .customisation-highlights {
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 7px;
+  }
+
+  .highlights-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .highlights-list li {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 7px;
+  }
+
+  .quote-btn {
+    margin-top: 15px;
+    padding: 5px 18px;
+  }
+}
+

@@ -1,6 +1,7 @@
 .galary-section {
-    padding: 100px 0;
+    padding: 80px 0;
     background: #cfcece; 
+    margin-top: 10vh;
 }
 
 .galary-section .container {
@@ -40,7 +41,7 @@
     transform: scale(1.08);
 }
 
-/* overlay */
+/* overlay 
 .galary-overlay {
     position: absolute;
     left: 0;
@@ -62,6 +63,8 @@
  
     pointer-events: none; 
 }
+
+*/
 
 .galary-overlay span {
     font-size: 13px;

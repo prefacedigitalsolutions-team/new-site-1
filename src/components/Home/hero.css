@@ -1,22 +1,10 @@
 
-/*
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-*/
-
 
 :root {
   --color-dark: #0a0a0a;
   --color-light: #ffffff;
   --color-gold: #c5a880; 
   --color-gray: #888888;
-  --font-serif: 'Playfair Display', 'Didot', serif; 
-  --font-sans: 'Inter', sans-serif;
 }
 
 
@@ -87,6 +75,9 @@ background-size: 30px 30px, 100% 100%;
   align-items: flex-start;
 }
 
+.hero-text span{
+  font-size: 20px;
+}
 .hero-badge {
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -100,7 +91,7 @@ background-size: 30px 30px, 100% 100%;
 /* Typography Reveal Masking */
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-size: clamp(2.5rem, 4vw, 4rem);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -1px;
@@ -115,10 +106,10 @@ background-size: 30px 30px, 100% 100%;
 }
 
 .hero-text {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   line-height: 1.7;
   color: #cccccc;
-  max-width: 520px;
+  max-width: 550px;
   margin-bottom: 40px;
 }
 
@@ -218,6 +209,7 @@ background-size: 30px 30px, 100% 100%;
 
 .hero-right {
   position: relative;
+  margin-top: -vh;
   height: 600px;
   display: flex;
   align-items: center;
@@ -345,8 +337,6 @@ background-size: 30px 30px, 100% 100%;
 
 
 
-
-
 @media (max-width:991px){
 
   .hero{
@@ -361,8 +351,8 @@ background-size: 30px 30px, 100% 100%;
 
   .hero-left{
     order:2;
-    align-items:center;
-    text-align:center;
+    align-items:flex-start;
+    text-align:left;
   }
 
   .hero-right{
@@ -373,18 +363,20 @@ background-size: 30px 30px, 100% 100%;
 
   .hero-title{
     font-size:4rem;
+    text-align:left;
   }
 
   .hero-text{
     max-width:650px;
+    text-align:left;
   }
 
   .hero-buttons{
-    justify-content:center;
+    justify-content:flex-start;
   }
 
   .hero-bottom{
-    justify-content:center;
+    justify-content:flex-start;
     gap:60px;
   }
 
@@ -416,11 +408,11 @@ background-size: 30px 30px, 100% 100%;
   .hero-title{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
+    justify-content:flex-start;
     gap:12px;
-    font-size:2.5rem;
-    line-height:1.15;
-    text-align:center;
+    font-size:1.6rem;
+    line-height:1.2;
+    text-align:left;
   }
 
   .title-line{
@@ -434,7 +426,7 @@ background-size: 30px 30px, 100% 100%;
 
   .title-line:nth-child(3){
     width:100%;
-    text-align:center;
+    text-align:left;
   }
 
   .hero-badge{
@@ -445,12 +437,12 @@ background-size: 30px 30px, 100% 100%;
   .hero-text{
     font-size:1rem;
     max-width:100%;
-    text-align:center;
+    text-align:left;
   }
 
   .hero-buttons{
     width:100%;
-    justify-content:center;
+    justify-content:flex-start;
   }
 
   .hero-btn{
@@ -475,12 +467,13 @@ background-size: 30px 30px, 100% 100%;
   }
 
   .hero-floating-two{
-     width:140px;
+    width:140px;
     height:180px;
     right:0px;
     bottom:140px;
   }
 
+  /* Black Box Card (Center Align) */
   .hero-card{
     left:50%;
     bottom:-20px;
@@ -501,8 +494,8 @@ background-size: 30px 30px, 100% 100%;
 
   .hero-bottom{
     display:flex;
-    justify-content:center;
-    align-items:center;
+    justify-content:flex-start;
+    align-items:flex-start;
     gap:35px;
     width:100%;
     padding-top:25px;
@@ -510,7 +503,7 @@ background-size: 30px 30px, 100% 100%;
 
   .hero-stat{
     flex:0 0 auto;
-    text-align:center;
+    text-align:left;
   }
 
   .hero-stat h2{

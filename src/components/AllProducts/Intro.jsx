@@ -1,6 +1,7 @@
+
 import "./Intro.css";
 
-function ProductIntro({ title, description }) {
+function ProductIntro({ subTag, title, leftContent, rightContent }) {
   return (
     <section className="product-intro">
       <div className="container">
@@ -12,14 +13,18 @@ function ProductIntro({ title, description }) {
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <span
-              className="sub-tag"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              Overview
-            </span>
+            {/* Sub Tag: Hide only when explicitly empty */}
+            {subTag !== "" && (
+              <span
+                className="sub-tag"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                {subTag || "Overview"}
+              </span>
+            )}
 
+            {/* Main Title */}
             <h2
               className="intro-title"
               data-aos="fade-up"
@@ -27,6 +32,15 @@ function ProductIntro({ title, description }) {
             >
               {title}
             </h2>
+
+            {/* Left Content */}
+            <div
+              className="intro-left-text"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              {leftContent}
+            </div>
           </div>
 
           {/* Right Column */}
@@ -41,13 +55,13 @@ function ProductIntro({ title, description }) {
               data-aos-delay="300"
             ></div>
 
-            <p
+            <div
               className="intro-desc"
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              {description}
-            </p>
+              {rightContent}
+            </div>
           </div>
 
         </div>
@@ -57,3 +71,4 @@ function ProductIntro({ title, description }) {
 }
 
 export default ProductIntro;
+

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import './Footer.css';
 import './ScrollToTop.css';
 
@@ -14,50 +15,48 @@ function Footer() {
       {/* Middle Links Section */}
       <div className="footer-middle">
         <div className="footer-grid-container">
-          
 
         {/* Column 1: Logo & Address */}
           <div className="footer-col brand-col">
             <div className="brand-logo">
-           
-              <h2>Corporate Gifting Solutions</h2>
+              <h2>Corporate Gift Branding</h2>
             </div>
             <address>
-              kirti shikhar 127 new delhi 110053
+              Kirtishikhar Building janakpuri Distric center New Delhi,110058 India
             </address>
-            <a href="tel:+919810968828" className="phone-link">+91-9810968828</a>
-            <a href="mailto:info@gmail.com" className="email-link">info@gmail.com</a>
+            <a href="tel:+917827797247" className="phone-link">+91-7827797247</a>
+            <a href="mailto:corporategiftsbranding@gmail.com" className="email-link">corporategiftbranding@gmail.com</a>
           </div>
 
-          {/* Column 2: Archiact Links */}
+          {/* Column 2: Quick Links (Updated according to App.jsx routes) */}
           <div className="footer-col">
-            <h3>ARCHIACT</h3>
+            <h3>QUICK LINK</h3>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#careers">Product</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/download">Download Catalogue</Link></li>
+              <li><Link to="/blog">Blogs</Link></li>
+              <li><Link to="/contact">Contact us</Link></li>
             </ul>
           </div>
 
-          {/* Column 3: Services */}
+          {/* Column 3: Products Part 1 (Linked to App.jsx product routes) */}
           <div className="footer-col">
-            <h3>SERVICES</h3>
+            <h3>PRODUCTS</h3>
             <ul>
-              <li><a href="#stationary">Stationary</a></li>
-              <li><a href="#clothing">Clothing</a></li>
-              <li><a href="#mugs">Mugs</a></li>
-              <li><a href="#tech-gifts">Tech Gifts</a></li>
+              <li><Link to="/products/Stationary">Stationary</Link></li>
+              <li><Link to="/products/Clothing">Clothing</Link></li>
+              <li><Link to="/products/Mugs">Drinkware</Link></li>
+              <li><Link to="/products/TechGift">Tech Gifts</Link></li>
             </ul>
           </div>
 
-          {/* Column 4: Events */}
+          {/* Column 4: Products Part 2 */}
           <div className="footer-col">
-            <h3>EVENTS</h3>
+            <h3 className="invisible-heading">&nbsp;</h3>
             <ul>
-              <li><a href="#bags">Bags</a></li>
-              <li><a href="#certificates">Certificates</a></li>
-              <li><a href="#trophy">Trophy & Award</a></li>
+              <li><Link to="/products/Bags">Bags</Link></li>
+              <li><Link to="/products/id-card">Id Card</Link></li>
+              <li><Link to="/products/Trophy">Trophy & Awards</Link></li>
             </ul>
           </div>
 
@@ -87,7 +86,7 @@ function Footer() {
       <div className="footer-bottom-bar">
         <div className="bottom-container">
           <p className="copyright-text">
-            &copy; {new Date().getFullYear()} Photo Studio. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Corporate Gift Branding. All Rights Reserved.
           </p>
           <p className="design-by">
             Design by <a href="#" target="_blank" rel="noopener noreferrer">Preface Communications</a>

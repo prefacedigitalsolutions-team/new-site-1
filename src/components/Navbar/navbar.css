@@ -45,7 +45,7 @@ ul {
 }
 
 .navbar-logo img {
-    width: 150px;
+    width: 200px;
     display: block;
 }
 
@@ -336,158 +336,204 @@ ul {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ================= MOBILE RESPONSIVE FIX (SCROLL SE PEHLE AUR BAAD DONO KE LIYE) ================= */
+
+
+
 @media (max-width: 768px) {
-    .navbar {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        padding: 12px 0 !important;
-        background: #000000 !important;
-    }
+  /* Scroll lock when menu is active */
+  body.menu-open, html.menu-open {
+    overflow: hidden !important;
+    height: 100vh !important;
+  }
 
-    .navbar.sticky {
-        padding: 10px 0 !important;
-        background: rgba(0, 0, 0, 0.95) !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-    }
+  body, html {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
-    /* Yaha container ki width 100% aur proper side spacing (padding: 0 16px) di gayi hai */
-    .navbar-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 16px !important;
-        box-sizing: border-box !important;
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-    }
+  .navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #0b0f19 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    z-index: 9999 !important;
+    box-sizing: border-box !important;
+    padding: 12px 0 !important;
+  }
 
-    .navbar-logo img {
-        width: 120px !important;
-    }
+  .navbar-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 16px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
 
-    .menu-toggle {
-        display: block !important;
-        flex-shrink: 0 !important;
-        margin-right: 0 !important;
-    }
+  .navbar-logo img {
+    width: 110px !important;
+    max-height: 38px !important;
+    object-fit: contain !important;
+  }
 
-    .navbar-menu {
-        position: absolute !important;
-        top: 100% !important;
-        left: 0 !important;
-        width: 100% !important;
-        background: #0f172a !important;
-        max-height: 0 !important;
-        overflow-y: auto !important;
-        visibility: hidden !important;
-        transition: max-height 0.35s ease-in-out, visibility 0.35s ease !important;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
-    }
+  /* Hamburger Toggle Button - 3 Lines Visible & Clear */
+  .menu-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 36px !important;
+    height: 28px !important;
+    background: #111827 !important;
+    border: 1px solid #d6b06d !important;
+    border-radius: 6px !important;
+    padding: 6px !important;
+    cursor: pointer !important;
+    z-index: 10000 !important;
+    box-sizing: border-box !important;
+  }
 
-    .navbar-menu.active {
-        max-height: 80vh !important;
-        visibility: visible !important;
-    }
+  .menu-toggle span {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background: #d6b06d !important;
+    border-radius: 2px !important;
+  }
 
-    .navbar-menu > ul {
-        width: 90% !important;
-        margin: 0 auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 0 !important;
-        padding: 15px 0 !important;
-    }
+  /* Mobile Dropdown Menu Drawer */
+  .navbar-menu {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #0b0f19 !important;
+    border-bottom: 2px solid #d6b06d !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9) !important;
+    box-sizing: border-box !important;
+    max-height: calc(100vh - 65px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
 
-    .navbar-menu > ul > li > a {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 12px 0 !important;
-        color: #ffffff !important;
-        font-size: 15px !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-    }
+  .navbar-menu.active {
+    display: block !important;
+  }
 
-    .mega-dropdown::before,
-    .navbar-menu > ul > li > a::before,
-    .navbar-menu > ul > li > a::after,
-    .dropdown-shutter-bg {
-        display: none !important;
-    }
+  .navbar-menu > ul {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    list-style: none !important;
+    padding: 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+  }
 
-    .mega-menu-content {
-        position: static !important;            
-        transform: none !important;    
-        width: 100% !important;
-        background: #1e293b !important;
-        border-radius: 4px !important;
-        padding: 12px !important;
-        margin-top: 8px !important;
-        display: none !important; 
-        grid-template-columns: 1fr !important; 
-        gap: 15px !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-    }
+  .navbar-menu > ul > li {
+    width: 100% !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-bottom: 8px !important;
+  }
 
-    .mega-dropdown.force-show .mega-menu-content {
-        display: grid !important; 
-    }
+  .navbar-menu > ul > li:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
 
-    .mega-column h3 {
-        font-size: 13px !important;
-        color: #d6b06d !important;
-        margin-left: 0 !important;
-        margin-bottom: 8px !important;
-        padding-bottom: 4px !important;
-        border-bottom: 1px solid rgba(214, 176, 109, 0.2) !important;
-    }
+  .navbar-menu > ul > li > a,
+  .navbar-menu > ul > li > .dropdown-btn {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+    color: #ffffff !important;
+    background: transparent !important;
+    border: none !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+  }
 
-    .mega-column ul li a {
-        color: #cbd5e1 !important;
-        font-size: 14px !important;
-        padding: 8px 10px !important;
-        display: block !important;
-        border-radius: 4px !important;
-        background: transparent !important;
-    }
+  .navbar-phone a {
+    color: #d6b06d !important;
+    font-weight: 600 !important;
+  }
 
-    .mega-column ul li a::before,
-    .mega-column ul li a::after {
-        display: none !important;
-    }
+  /* Hide unwanted decorative shutter backgrounds or diamond shapes on mobile */
+  .dropdown-shutter-bg,
+  .mega-dropdown::before,
+  .mega-dropdown::after {
+    display: none !important;
+  }
 
-    .mega-column ul li a:hover,
-    .mega-column ul li a.active-dropdown-link {
-        background: rgba(214, 176, 109, 0.1) !important;
-        color: #d6b06d !important;
-    }
+  /* Nested Mega Menu / Dropdown Box Styling */
+  .mega-menu-content {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #161e31 !important;
+    border: 1px solid rgba(214, 176, 109, 0.3) !important;
+    border-radius: 6px !important;
+    padding: 14px !important;
+    margin-top: 8px !important;
+    display: none !important;
+    box-sizing: border-box !important;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+  }
 
-    /* PRODUCTS BUTTON - MOBILE */
-    .navbar-menu > ul > li > .dropdown-btn {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: space-header !important;
-        align-items: center !important;
-        padding: 12px 0 !important;
-        margin: 0 !important;
-        background: transparent !important;
-        background-color: transparent !important;
-        border: none !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-        outline: none !important;
-        color: #ffffff !important;
-        font-family: inherit !important;
-        font-size: 15px !important;
-        font-weight: 500 !important;
-        text-align: left !important;
-        cursor: pointer !important;
-    }
+  .mega-dropdown.force-show .mega-menu-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .mega-column {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .mega-column h3 {
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    color: #d6b06d !important;
+    margin: 0 0 6px 0 !important;
+    padding-bottom: 4px !important;
+    border-bottom: 1px solid rgba(214, 176, 109, 0.2) !important;
+  }
+
+  .mega-column ul {
+    padding-left: 0 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+
+  .mega-column ul li a {
+    color: #cbd5e1 !important;
+    padding: 8px 10px !important;
+    display: block !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 4px !important;
+    box-sizing: border-box !important;
+  }
+
+  .mega-column ul li a:hover {
+    background: rgba(214, 176, 109, 0.15) !important;
+    color: #ffffff !important;
+  }
 }
