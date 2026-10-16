@@ -1,12 +1,26 @@
+<<<<<<< HEAD
 // All section import
 import ProductBanner from "../../../components/AllProducts/ProductBanner";
 import ProductIntro from "../../../components/AllProducts/Intro";
 import Galary from "../../../components/AllProducts/Galary";
 import SEO from "../../../components/SEO";
+=======
+
+import ProductBanner from "../../../components/AllProducts/ProductBanner";
+import ProductIntro from "../../../components/AllProducts/Intro";
+import Galary from "../../../components/AllProducts/Galary";
+import ModernStatic from "../../../components/NewStatic/ModernStatic";
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 
 // Banner image
 import banner from "../../../assets/images/trophy/trophy-banar-1.jpg";
 
+<<<<<<< HEAD
+=======
+// Static image
+import aboutImage from "../../../assets/images/trophy/start-trophy.jpg";
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 // Automatically import all trophy images
 const trophyImages = import.meta.glob(
   "../../images/trophy/*.{jpg,jpeg,png,webp}",
@@ -20,78 +34,129 @@ const galleryImages = [
   {
     image: trophyImages["../../images/trophy/mementors.jpg"],
     className: "large",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Premium corporate mementos and engraved wooden award plaques",
+=======
+    category: "Premium",
+    title: "mementors",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: trophyImages["../../images/trophy/trophy-long.jpg"],
     className: "tall",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Professional recognition long crystal trophy cup for corporate winners",
+=======
+    category: "Corporate Awards",
+    title: "Professional Recognition Trophy",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: trophyImages["../../images/trophy/metal-trophy.jpg"],
     className: "small",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Durable metal award trophy for corporate achievements and events",
+=======
+    category: "Awards",
+    title: "Trophy",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: trophyImages["../../images/trophy/metal-trophy-2.jpg"],
     className: "small",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Stylish metal trophy with sleek finish for competitions and awards",
+=======
+    category: "metal",
+    title: "Trophy",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: trophyImages["../../images/trophy/mementos.jpg"],
     className: "wide",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Exclusive award collection featuring luxury custom mementos",
+=======
+    category: "Luxury Range",
+    title: "Exclusive Award Collection",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: trophyImages["../../images/trophy/start-trophy.jpg"],
     className: "large",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Customized star trophy design for excellence and corporate gifting",
+=======
+    category: "Corporate Gifts",
+    title: "Customized Trophy Designs",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: trophyImages["../../images/trophy/metal-trophy-l.jpg"],
     className: "tall",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Designer large metal trophy series with premium polish",
+=======
+    category: "Premium Finish",
+    title: "Designer Trophy Series",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: trophyImages["../../images/trophy/kabaddi.jpg"],
     className: "small",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Special kabaddi sports championship crystal trophy and winner cup",
+=======
+    category: "Trophy",
+    title: "kabaddi",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: trophyImages["../../images/trophy/match-trophy.jpg"],
     className: "small",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Cricket and sports tournament match trophy and winner award",
+=======
+     category: "Trophy",
+    title: "Cricket",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: trophyImages["../../images/trophy/start-trophy-1.jpg"],
     className: "wide",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Premium star trophy designs for corporate events and functions",
+=======
+    category: "Exclusive Collection",
+    title: "Premium Trophy Designs",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
 ];
 
 function Trophy() {
   return (
     <>
+<<<<<<< HEAD
       {/* Trophy Page ke liye SEO */}
       <SEO 
         title="Custom Trophies and Awards | Corporate and Sports Trophies" 
@@ -157,8 +222,28 @@ function Trophy() {
   }
 />
       <Galary images={galleryImages} />
+=======
+      <ProductBanner
+        image={banner}
+        title="Trophy"
+      />
+
+      <ProductIntro
+        title="Premium Trophy & Award Collection"
+        description="Our premium trophy and award collection is designed to celebrate achievements, success, and excellence. Crafted with elegant designs and high-quality finishes, our trophies are perfect for corporate events, sports competitions, employee recognition, and special occasions."
+      />
+
+      <Galary images={galleryImages} />
+
+      <ModernStatic image={aboutImage} />
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     </>
   );
 }
 
+<<<<<<< HEAD
 export default Trophy;
+=======
+export default Trophy;
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0

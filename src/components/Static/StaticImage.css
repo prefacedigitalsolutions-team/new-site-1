@@ -18,7 +18,11 @@
 .static-overlay {
     position: absolute;
     inset: 0;
+<<<<<<< HEAD
     background: rgba(0, 0, 0, 0.25);
+=======
+    background: rgba(0, 0, 0, 0.55);
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 }
 
 /* Content */
@@ -29,7 +33,11 @@
     display: flex;
     align-items: center;
 
+<<<<<<< HEAD
     width: 85%;
+=======
+    width: 90%;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     max-width: 1400px;
     margin: auto;
 }
@@ -135,10 +143,17 @@
 
     text-transform: uppercase;
 
+<<<<<<< HEAD
     max-width: 400px;
 }
 
 
+=======
+    max-width: 700px;
+}
+
+/* Tablet */
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 @media (max-width:991px) {
 
     .title-content h2 {
@@ -147,7 +162,11 @@
 
 }
 
+<<<<<<< HEAD
 
+=======
+/* Mobile */
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 @media (max-width:768px) {
 
     .static-image {
@@ -161,7 +180,11 @@
     }
 
     .title-content h2 {
+<<<<<<< HEAD
         font-size: 25px;
+=======
+        font-size: 32px;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     }
 
     @keyframes waterFlow {

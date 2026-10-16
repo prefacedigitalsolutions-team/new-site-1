@@ -57,8 +57,12 @@ useEffect(() => {
   );
 }
 
+<<<<<<< HEAD
 export default ProductBanner;
 
 
 
 
+=======
+export default ProductBanner;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0

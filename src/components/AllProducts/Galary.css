@@ -1,7 +1,12 @@
 .galary-section {
+<<<<<<< HEAD
     padding: 80px 0;
     background: #cfcece; 
     margin-top: 10vh;
+=======
+    padding: 100px 0;
+    background: #cfcece; 
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 }
 
 .galary-section .container {
@@ -41,7 +46,11 @@
     transform: scale(1.08);
 }
 
+<<<<<<< HEAD
 /* overlay 
+=======
+/* overlay */
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 .galary-overlay {
     position: absolute;
     left: 0;
@@ -64,8 +73,11 @@
     pointer-events: none; 
 }
 
+<<<<<<< HEAD
 */
 
+=======
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 .galary-overlay span {
     font-size: 13px;
     letter-spacing: 2px;

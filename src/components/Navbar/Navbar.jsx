@@ -1,9 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
+<<<<<<< HEAD
 import { HashLink } from "react-router-hash-link"; // HashLink ko wapas import karein
+=======
+import { HashLink } from "react-router-hash-link";
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 import { useEffect, useState } from "react";
 
 import "./navbar.css";
 import logo from "../../assets/images/logo.png";
+<<<<<<< HEAD
+=======
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 import { menuData } from "./menuData";
 
 function Navbar() {
@@ -19,6 +27,10 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
+<<<<<<< HEAD
+=======
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -43,8 +55,13 @@ function Navbar() {
 
       <header className={`navbar ${sticky ? "sticky" : ""}`}>
         <div className="navbar-container">
+<<<<<<< HEAD
 
           {/* LOGO */}
+=======
+          {/* LOGO */}
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
           <div className="navbar-logo">
             <Link to="/" onClick={closeMenu}>
               <img src={logo} alt="Logo" />
@@ -63,7 +80,22 @@ function Navbar() {
                 </Link>
               </li>
 
+<<<<<<< HEAD
               {/* PRODUCTS DROPDOWN */}
+=======
+              <li>
+                <Link
+                  to="/about"
+                  className={location.pathname === "/about" ? "active" : ""}
+                  onClick={closeMenu}
+                >
+                  About
+                </Link>
+              </li>
+
+              {/* PRODUCTS */}
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
               <li
                 className={`dropdown mega-dropdown ${
                   serviceOpen ? "force-show" : ""
@@ -96,18 +128,31 @@ function Navbar() {
                   <i className="fa-solid fa-angle-down"></i>
                 </button>
 
+<<<<<<< HEAD
                 <div className="dropdown-shutter-bg">
                   <div className="shutter-left"></div>
+=======
+                {/* SHUTTER BACKGROUND */}
+
+                <div className="dropdown-shutter-bg">
+                  <div className="shutter-left"></div>
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
                   <div className="shutter-right"></div>
                 </div>
 
                 {/* MEGA MENU */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
                 <div className="dropdown-menu mega-menu-content">
                   {menuData.map((menu, index) => (
                     <div className="mega-column" key={index}>
                       <h3>{menu.title}</h3>
 
                       <ul>
+<<<<<<< HEAD
                         {menu.items.map((item) => {
                           // Clean absolute path for HashLink to prevent double routing bugs
                           const cleanPath = item.path.startsWith("/")
@@ -146,12 +191,46 @@ function Navbar() {
                             </li>
                           );
                         })}
+=======
+                        {menu.items.map((item) => (
+                          <li key={item.name}>
+                            {item.type === "hash" ? (
+                              <HashLink
+                                smooth
+                                to={`${item.path}#${item.hash}`}
+                                className={
+                                  location.pathname === item.path &&
+                                  location.hash === `#${item.hash}`
+                                    ? "active-dropdown-link"
+                                    : ""
+                                }
+                                onClick={handleDropdownLinkClick}
+                              >
+                                {item.name}
+                              </HashLink>
+                            ) : (
+                              <Link
+                                to={item.path}
+                                className={
+                                  location.pathname === item.path
+                                    ? "active-dropdown-link"
+                                    : ""
+                                }
+                                onClick={handleDropdownLinkClick}
+                              >
+                                {item.name}
+                              </Link>
+                            )}
+                          </li>
+                        ))}
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
                       </ul>
                     </div>
                   ))}
                 </div>
               </li>
 
+<<<<<<< HEAD
               {/* DOWNLOAD */}
               <li>
                 <Link
@@ -175,12 +254,15 @@ function Navbar() {
               </li>
 
               {/* CONTACT */}
+=======
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
               <li>
                 <Link
                   to="/contact"
                   className={location.pathname === "/contact" ? "active" : ""}
                   onClick={closeMenu}
                 >
+<<<<<<< HEAD
                   Contact us
                 </Link>
               </li>
@@ -191,25 +273,52 @@ function Navbar() {
             </ul>
           </nav>
 
+=======
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* MOBILE BUTTON */}
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
           <button
             type="button"
             className={`menu-toggle ${menuOpen ? "active" : ""}`}
             onClick={() => {
+<<<<<<< HEAD
               setMenuOpen(!menuOpen);
+=======
+              setMenuOpen((prev) => !prev);
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
               if (menuOpen) {
                 setServiceOpen(false);
               }
             }}
           >
             <span></span>
+<<<<<<< HEAD
             <span></span>
             <span></span>
           </button>
 
+=======
+
+            <span></span>
+
+            <span></span>
+          </button>
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
         </div>
       </header>
     </>
   );
 }
 
+<<<<<<< HEAD
 export default Navbar;
+=======
+export default Navbar;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0

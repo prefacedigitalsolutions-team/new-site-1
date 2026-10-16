@@ -5,6 +5,7 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+<<<<<<< HEAD
     // Browser ko previous scroll position restore karne se roko
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
@@ -34,3 +35,12 @@ function ScrollToTop() {
 }
 
 export default ScrollToTop; 
+=======
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+export default ScrollToTop;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0

@@ -1,11 +1,25 @@
+<<<<<<< HEAD
 import ProductBanner from "../../../components/AllProducts/ProductBanner";
 import ProductIntro from "../../../components/AllProducts/Intro";
 import Galary from "../../../components/AllProducts/Galary";
 import SEO from "../../../components/SEO"; 
+=======
+
+import ProductBanner from "../../../components/AllProducts/ProductBanner";
+import ProductIntro from "../../../components/AllProducts/Intro";
+import Galary from "../../../components/AllProducts/Galary";
+import ModernStatic from "../../../components/NewStatic/ModernStatic";
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 
 // Banner image
 import banner from "../../../assets/images/bags/bag-banar-1.jpg";
 
+<<<<<<< HEAD
+=======
+// Static image
+import aboutImage from "../../../assets/images/bags/bag-banar-1.jpg";
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 // Automatically import all bag images
 const bagImages = import.meta.glob(
   "../../images/bags/*.{jpg,jpeg,png,webp}",
@@ -19,6 +33,7 @@ const galleryImages = [
   {
     image: bagImages["../../images/bags/back-pack.jpg"],
     className: "large",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Luxury leather backpack for stylish travel and daily use",
@@ -71,26 +86,83 @@ const galleryImages = [
     category: "",
     title: "",
     alt: "Premium lightweight backpack for students and travelers",
+=======
+    category: "Premium Bags",
+    title: "Luxury Bag Collection",
+  },
+  {
+    image: bagImages["../../images/bags/bag-02.jpg"],
+    className: "tall",
+    category: "Corporate Bags",
+    title: "Professional Carry Solutions",
+  },
+  {
+    image: bagImages["../../images/bags/lether-bag.jpg"],
+    className: "small",
+    category: "Travel Collection",
+    title: "Comfort Travel Bags",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: bagImages["../../images/bags/jute-bag.jpg"],
     className: "small",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Exclusive gift bag perfect for corporate gifting",
+=======
+    category: "Daily Essentials",
+    title: "Stylish Utility Bags",
+  },
+  {
+    image: bagImages["../../images/bags/canvas-bag.jpg"],
+    className: "wide",
+    category: "Executive Range",
+    title: "Premium Office Bags",
+  },
+  {
+    image: bagImages["../../images/bags/tote-bag.jpg"],
+    className: "large",
+    category: "Fashion Collection",
+    title: "Modern Designer Bags",
+  },
+  {
+    image: bagImages["../../images/bags/tote-bag-1.jpg"],
+    className: "tall",
+    category: "Business Solutions",
+    title: "Corporate Branding Bags",
+  },
+  {
+    image: bagImages["../../images/bags/paper-bag.jpg"],
+    className: "small",
+    category: "Backpacks",
+    title: "Premium Backpack Series",
+  },
+  {
+    image: bagImages["../../images/bags/laptop-bag.jpg"],
+    className: "small",
+    category: "Gift Collection",
+    title: "Exclusive Gift Bags",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: bagImages["../../images/bags/bag-4.jpg"],
     className: "wide",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Customized luxury premium bag with unique design",
+=======
+    category: "Luxury Collection",
+    title: "Customized Premium Bags",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
 ];
 
 function Bags() {
   return (
     <>
+<<<<<<< HEAD
       {/* Page ke liye SEO */}
       <SEO 
         title="Custom Paper Carry Bags with Logo | Bulk Printing" 
@@ -149,8 +221,28 @@ function Bags() {
 />
 
       <Galary images={galleryImages} />
+=======
+      <ProductBanner
+        image={banner}
+        title="Bag"
+      />
+
+      <ProductIntro
+        title="Premium Bag Collection"
+        description="Our premium bag collection is designed to combine durability, functionality, and modern style. Crafted with quality materials and thoughtful designs, these bags are ideal for corporate gifting, travel, daily use, and brand promotions."
+      />
+
+      <Galary images={galleryImages} />
+
+      <ModernStatic image={aboutImage} />
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     </>
   );
 }
 
+<<<<<<< HEAD
 export default Bags;
+=======
+export default Bags;
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0

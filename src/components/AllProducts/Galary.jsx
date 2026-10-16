@@ -18,7 +18,11 @@ function Galary({ images }) {
           card,
           {
             opacity: 0,
+<<<<<<< HEAD
             y: 50, 
+=======
+            y: 50, // 80 se thoda kam kiya taaki scroll distance thoda normal lage
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
             scale: 0.96,
             x: index % 2 === 0 ? -30 : 30,
           },
@@ -67,7 +71,11 @@ function Galary({ images }) {
   );
 }
 
+<<<<<<< HEAD
 export default Galary;
 
 
 
+=======
+export default Galary;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0

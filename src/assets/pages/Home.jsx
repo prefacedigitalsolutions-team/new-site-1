@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // All section import
 import Hero from "../../components/Home/Hero";
 import Intro from "../../components/Home/Intro";
@@ -13,11 +14,24 @@ import FAQ from "../../components/Home/faq";
 import SEO from "../../components/SEO"; 
 
 import homeBanner from "../../assets/images/hero/home-banar-2.jpg";
+=======
+
+
+import Hero from "../../components/Home/Hero";
+import Intro from "../../components/Home/Intro";
+
+import StaticImage from "../../components/Static/StaticImage";
+import Service from"../../components/Home/Service";
+
+import homeBanner from "../../assets/images/hero/home-food-banar-03.jpg";
+import ModernStatic from "../../components/NewStatic/ModernStatic";
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 
 
 function Home() {
   return (
     <>
+<<<<<<< HEAD
       {/* Home Page ke liye SEO */}
       <SEO 
         title="Corporate Gifting Solutions | Premium Promotional Merchandise & Business Gifts" 
@@ -47,6 +61,20 @@ function Home() {
       <BLOG /> 
 
       <FAQ /> 
+=======
+
+      <Hero />
+      <Intro />
+
+      <StaticImage
+       title="Welcome To Preface Digital Solutions"image={homeBanner}/>
+
+       <Service />
+
+      <ModernStatic image={homeBanner} />
+      
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     </>
   );
 }

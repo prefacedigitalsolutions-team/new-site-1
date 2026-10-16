@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 /* Banar section start */
+=======
+
+
+/*Banar section start */
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 
 .product-banner {
     position: relative;
     width: 100%;
+<<<<<<< HEAD
     height: 100vh;
+=======
+    height: 90vh;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     min-height: 500px;
 
     display: flex;
@@ -16,6 +26,7 @@
 }
 
 
+<<<<<<< HEAD
 /* Sirf Top se 200px tak Overlay/Gradient (Baaki poori image clean rahegi) */
 .product-banner::before {
     content: "";
@@ -43,6 +54,15 @@
     position: absolute;
     inset: 0;
     z-index: 2;
+=======
+/* Premium Shine Layer */
+
+.product-banner::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     pointer-events: none;
 
     background: linear-gradient(
@@ -62,6 +82,7 @@
     animation: bannerShine 4.5s ease-in-out infinite;
 }
 
+<<<<<<< HEAD
 @keyframes bannerShine {
     0% {
         background-position: 220% 0;
@@ -118,6 +139,67 @@
 
     .product-banner::before {
         height: 150px; /* Tablet ke liye 150px height */
+=======
+@keyframes bannerShine{
+
+    0%{
+        background-position: 220% 0;
+        opacity: 0;
+    }
+
+    12%{
+        opacity: .9;
+    }
+
+    50%{
+        opacity: .55;
+    }
+
+    100%{
+        background-position: -120% 0;
+        opacity: 0;
+    }
+
+}
+
+    
+
+/* Banner Title */
+
+.product-banner h1{
+    position:absolute;
+    left:8%;
+    top:58%;
+    transform:translateY(-50%);
+
+    z-index:2;
+
+    color:#fff;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(44px,6vw,74px);
+    font-weight:600;
+
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-align:left;
+    line-height:1.05;
+
+    text-shadow:
+        0 8px 25px rgba(0,0,0,.35),
+        0 18px 45px rgba(0,0,0,.18);
+}
+
+
+
+@media (max-width: 991px) {
+
+    .product-banner {
+        height: 70vh;
+        min-height: 450px;
+
+        background-position: center center;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     }
 
     .product-banner h1 {
@@ -126,14 +208,24 @@
 
         font-size: clamp(40px, 7vw, 62px);
         line-height: 1.05;
+<<<<<<< HEAD
+=======
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
         letter-spacing: 0.8px;
     }
 }
 
 
 @media (max-width: 767px) {
+<<<<<<< HEAD
     .product-banner {
         margin-top: 8vh;
+=======
+
+    .product-banner {
+        margin-top: 10vh;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
         width: 100%;
         height: 25vh;
         min-height: 250px;
@@ -142,6 +234,7 @@
         background-size: cover;
     }
 
+<<<<<<< HEAD
     .product-banner::before {
         height: 90px; /* Mobile ke liye 90px height taaki chote screen par fit rahe */
     }
@@ -158,3 +251,27 @@
         text-align: left;
     }
 }
+=======
+
+
+    /* Banner Title */
+
+    .product-banner h1 {
+        left: 6%;
+        right: 6%;
+
+        top: 75%;
+
+        transform: translateY(-50%);
+
+        font-size: 30px;
+
+        line-height: 1.08;
+        letter-spacing: 0.5px;
+
+        text-align: left;
+    }
+
+}
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0

@@ -1,7 +1,11 @@
 
 .product-intro {
     padding: 120px 0 0 0px;
+<<<<<<< HEAD
     background: #ffffff;
+=======
+    background: #cfcece;
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     overflow: hidden;
 }
 
@@ -24,7 +28,28 @@
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 
+=======
+.intro-title-block .sub-tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.intro-title-block .intro-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px; 
+    font-weight: 600; 
+    color: #111111;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 
 /* right column */
 .intro-desc-wrapper {
@@ -74,6 +99,7 @@
     text-align: justify;
 }
 
+<<<<<<< HEAD
 .intro-desc-wrapper .intro-desc span {
     font-size: 16px;
     line-height: 1.85;
@@ -100,6 +126,8 @@
         border-radius: 8px; 
         text-decoration: none;
      }
+=======
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 
 @media (max-width: 991px) {
     .intro-split-grid {
@@ -162,6 +190,7 @@
     100% {
         left: 120%;
     }
+<<<<<<< HEAD
 }
 
 
@@ -341,3 +370,6 @@
   }
 }
 
+=======
+}
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0

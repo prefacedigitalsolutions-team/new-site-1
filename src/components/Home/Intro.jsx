@@ -1,6 +1,10 @@
 import "./Intro.css";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import aboutImage from "../../assets/images/hero/mug-3.jpg";
+=======
+import aboutImage from "../../assets/images/bags/paper-bag.jpg";
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 
 const Intro = () => {
   const navigate = useNavigate();
@@ -11,7 +15,11 @@ const Intro = () => {
         {/* Left Content Side */}
         <div className="wcu-content" data-aos="fade-right">
           <h2 className="wcu-heading" data-aos="fade-up">
+<<<<<<< HEAD
             <span className="text-highlight">What we make</span>
+=======
+            <span className="text-highlight">WHY</span> CHOOSE US
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
           </h2>
 
           <p
@@ -19,6 +27,7 @@ const Intro = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
+<<<<<<< HEAD
          Custom Diaries & Notebook, Desk Accessories, Steel Bottles & Drinkware,
             Paper Carry Bags, & Employee ID Cards & Ready-to-send <br></br>kits For Onboarding, Festivals & Events.
           </p>
@@ -31,26 +40,49 @@ const Intro = () => {
               <span>
                
                 Choose your products or tell us your budget.
+=======
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            porttitor purus ac tellus auctor auctor. Nulla tincidunt lobortis
+            aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Cras porttitor purus ac tellus auctor auctor. Nulla tincidunt
+            lobortis aliquam.
+          </p>
+
+          <ul className="wcu-list">
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i className="bi bi-check-circle-fill wcu-icon"></i>
+              <span>
+                Lorem ipsum dolor sit amet adipiscing elit. Tur adipiscing elit.
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
               </span>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="300">
               <i className="bi bi-check-circle-fill wcu-icon"></i>
               <span>
+<<<<<<< HEAD
                We prepare a mockup with your logo.
+=======
+                Lorem ipsum dolor sit amet adipiscing elit. Tur adipiscing elit.
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
               </span>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
               <i className="bi bi-check-circle-fill wcu-icon"></i>
               <span>
+<<<<<<< HEAD
                You approve the design, and we produce and pack.
+=======
+                Lorem ipsum dolor sit amet adipiscing elit. Tur adipiscing elit.
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
               </span>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="500">
               <i className="bi bi-check-circle-fill wcu-icon"></i>
               <span>
+<<<<<<< HEAD
                 We deliver to your office or directly to your recipients.
               </span>
             </li>
@@ -58,6 +90,11 @@ const Intro = () => {
             <h3><br></br>Why choose us:</h3>
             <p>In-house Design Support, Bulk Pricing, A Sample Before Confirmed
               Order, <br></br>& One Team Handling Design, Printing & Delivery.</p>
+=======
+                Lorem ipsum dolor sit amet adipiscing elit. Tur adipiscing elit.
+              </span>
+            </li>
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
           </ul>
 
          <button
@@ -65,7 +102,11 @@ const Intro = () => {
              data-aos="zoom-in"
              data-aos-delay="600"
              onClick={() => navigate("/about")} >
+<<<<<<< HEAD
                Get a Free Quote
+=======
+              Learn More
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
               </button>
         </div>
 

@@ -1,12 +1,26 @@
+<<<<<<< HEAD
 // All section import
 import ProductBanner from "../../../components/AllProducts/ProductBanner";
 import ProductIntro from "../../../components/AllProducts/Intro";
 import Galary from "../../../components/AllProducts/Galary";
 import SEO from "../../../components/SEO"; // SEO Component import kiya
+=======
+
+import ProductBanner from "../../../components/AllProducts/ProductBanner";
+import ProductIntro from "../../../components/AllProducts/Intro";
+import Galary from "../../../components/AllProducts/Galary";
+import ModernStatic from "../../../components/NewStatic/ModernStatic";
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 
 // Banner image
 import banner from "../../../assets/images/tech-gift/tech-gift-banar-1.jpg";
 
+<<<<<<< HEAD
+=======
+// Static image
+import aboutImage from "../../../assets/images/tech-gift/power-bank.jpg";
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
 // Auto import all Tech Gift images
 const galleryFiles = import.meta.glob(
   "../../images/tech-gift/*.{jpg,jpeg,png,webp}",
@@ -20,13 +34,19 @@ const galleryImages = [
   {
     image: galleryFiles["../../images/tech-gift/power-bank.jpg"],
     className: "large",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Premium portable power bank and fast-charging tech accessories for corporate gifting",
+=======
+    category: "Tech Collection",
+    title: "Premium Tech Accessories",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: galleryFiles["../../images/tech-gift/usb.jpg"],
     className: "tall",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Modern custom branded USB and pen drives for smart technology gadgets",
@@ -44,38 +64,75 @@ const galleryImages = [
     category: "",
     title: "",
     alt: "Smart office wall clock and innovative branded tech gift items",
+=======
+    category: "Smart Gadgets",
+    title: "Modern Technology Gifts",
+  },
+  {
+    image: galleryFiles["../../images/tech-gift/phone-stand.jpg"],
+    className: "small",
+    category: "Corporate Gifts",
+    title: "Branded Tech Products",
+  },
+  {
+    image: galleryFiles["../../images/tech-gift/wall-clock.jpg"],
+    className: "small",
+    category: "Innovation",
+    title: "Smart Office Essentials",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: galleryFiles["../../images/tech-gift/usb-2.jpg"],
     className: "wide",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Exclusive tech collection featuring premium promotional USB and pen drives",
+=======
+    category: "Premium Range",
+    title: "Exclusive Tech Collection",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: galleryFiles["../../images/tech-gift/digital-clock-pen.jpg"],
     className: "large",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Next-generation digital clock with pen stand set and custom branding options",
+=======
+    category: "Digital Accessories",
+    title: "Next Generation Gadgets",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: galleryFiles["../../images/tech-gift/phone-stand-1.jpg"],
     className: "tall",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Professional digital clock with pen stand and tech desk accessories",
+=======
+    category: "Corporate Solutions",
+    title: "Professional Tech Gifts",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: galleryFiles["../../images/tech-gift/digital-clock-1.jpg"],
     className: "small",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Useful digital desk clock accessory for office tables, cabins, and rooms",
+=======
+    category: "Daily Use",
+    title: "Useful Tech Accessories",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
   {
     image: galleryFiles["../../images/tech-gift/wall-clock-1.jpg"],
     className: "small",
+<<<<<<< HEAD
     category: "",
     title: "",
     alt: "Luxury wall clock and executive corporate tech gift items for offices",
@@ -86,12 +143,23 @@ const galleryImages = [
     category: "",
     title: "",
     alt: "Advanced technology fast-charging power bank for executive corporate gifting",
+=======
+    category: "Premium Gifts",
+    title: "Luxury Tech Items",
+  },
+  {
+    image: galleryFiles["../../images/tech-gift/power-bank-1.jpg"],
+    className: "wide",
+    category: "Exclusive Collection",
+    title: "Advanced Technology Gifts",
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
   },
 ];
 
 function TechGift() {
   return (
     <>
+<<<<<<< HEAD
       {/* Tech Gifts Page ke liye SEO */}
       <SEO 
         title="Corporate Tech Gifts, Power Banks, USB Drives & Digital Clocks" 
@@ -189,8 +257,28 @@ function TechGift() {
 />
 
       <Galary images={galleryImages} />
+=======
+      <ProductBanner
+        image={banner}
+        title="Gift"
+      />
+
+      <ProductIntro
+        title="Premium Tech Gift Collection"
+        description="Our premium tech gift collection combines innovation, functionality, and modern design. From smart accessories to corporate technology solutions, each product is carefully selected to deliver a premium gifting experience for clients, employees, and business partners."
+      />
+
+      <Galary images={galleryImages} />
+
+      <ModernStatic image={aboutImage} />
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
     </>
   );
 }
 
+<<<<<<< HEAD
 export default TechGift;
+=======
+export default TechGift;
+
+>>>>>>> b516c4b8c0c0c445a16a44db1025ad773606f0c0
